@@ -17,32 +17,45 @@
 // The bitcoin protocol includes built-in algorithms that regulate the mining function across the network.  The difficulty of the processing task that miners must perform is adjusted dynamically so that, on average, someone succeeds every 10 minutes regardless of how many miners (and how much processing) are competing at any moment.  The protocol also halves the rate at which new bitcoin are created every 4 years, and limits the total number of bitcoin that will be created to a fixed total just below 21 million coins. The result is that the number of bitcoin in circulation closely follows an easily predictable curve that approaches 21 million by the year 2140.  Due to bitcoin's diminishing rate of issuance, over the long term, the bitcoin currency is deflationary. Furthermore, bitcoin cannot be inflated by "printing" new money above and beyond the expected issuance rate.
 비트코인 프로토콜은 네트워크를 통해 채굴 기능을 조절하는 내장 알고리즘을 포함한다. 채굴자가 작업해야 하는 작업 난이도는 동적으로 조절된다. 이는 어떤 순간이라도 얼마나 많은 채굴자 (및 얼마나 많이 진행되고 있는지)가 채굴 작업을 진행하고 있는지 여부와 상관없이 평균적으로 10분마다 누군가가 채굴에 성공하도록 하기 위함이다. 또한 프로토콜은 4년마다 새로 생성되는 비트코인을 반감하며, 총 비트코인 공급량을 2,100만 코인으로 제한한다. 그 결과 유통되는 비트코인 수는 2140년까지 2,100만 코인에 도달하는 쉽게 예측할 수 있는 곡선을 따르게 된다. 장기간에 걸쳐 비트코인 발행률을 감소시키기 때문에 비트코인은 디플레이션 화폐이다. 또한 비트코인은 예상 발행률 이상으로 새 화폐를 "발행 (printing)"하여 인플레이션을 초래할 수 없다.
 
-Behind the scenes, bitcoin is also the name of the protocol, a peer-to-peer network, and a distributed computing innovation. The bitcoin currency is really only the first application of this invention. Bitcoin represents the culmination of decades of research in cryptography and distributed systems and includes four key innovations brought together in a unique and powerful combination. Bitcoin consists of:
+// Behind the scenes, bitcoin is also the name of the protocol, a peer-to-peer network, and a distributed computing innovation. The bitcoin currency is really only the first application of this invention. Bitcoin represents the culmination of decades of research in cryptography and distributed systems and includes four key innovations brought together in a unique and powerful combination. Bitcoin consists of:
+다른 관점에서 보면 비트코인은 프로토콜, P2P 네트워크 및 분산 컴퓨팅 혁신을 뜻하기도 한다. 비트코인 통화는 실제로 이러한 발명이 처음 적용된 사례이다. 비트코인은 암호학 및 분산 시스템에 대한 수십년간의 연구의 집약체이며 독특하고 강력한 조합으로 이루어진 4 가지 핵심 혁신을 포함한다. 비트코인은 다음과 같이 구성된다:
 
-* A decentralized peer-to-peer network (the bitcoin protocol)
-* A public transaction ledger (the blockchain)
-* ((("mining and consensus", "consensus rules", "satisfying")))A set of rules for independent transaction validation and currency issuance (consensus rules)
-* A mechanism for reaching global decentralized consensus on the valid blockchain (Proof-of-Work algorithm)
+// * A decentralized peer-to-peer network (the bitcoin protocol)
+* 탈중앙화된 P2P 네트워크 (비트코인 프로토콜)
+// * A public transaction ledger (the blockchain)
+* 공개 거래 장부 (블록체인)
+// * ((("mining and consensus", "consensus rules", "satisfying")))A set of rules for independent transaction validation and currency issuance (consensus rules)
+* ((("mining and consensus", "consensus rules", "satisfying")))독립적인 거래 입증 및 통화 발행에 관한 규칙 집합 (합의 규칙)
+// * A mechanism for reaching global decentralized consensus on the valid blockchain (Proof-of-Work algorithm)
+* 유효한 블록체인에서 글로벌 탈중앙화 합의에 도달하기 위한 메커니즘 (작업 증명 알고리즘)
 
-As a developer, I see bitcoin as akin to the internet of money, a network for propagating value and securing the ownership of digital assets via distributed computation. There's a lot more to bitcoin than first meets the eye.
+// As a developer, I see bitcoin as akin to the internet of money, a network for propagating value and securing the ownership of digital assets via distributed computation. There's a lot more to bitcoin than first meets the eye.
+개발자로서, 나는 비트코인을 인터넷머니와 유사하며, 분산 연산을 통해 화폐 가치를 보급하고 디지털 자산의 소유권을 보호하는 네트워크라고 생각한다. 비트코인을 알면 알수록 더 많은 매력을 가지고 있다.
 
-In this chapter we'll get started by explaining some of the main concepts and terms, getting the necessary software, and using bitcoin for simple transactions. In following chapters we'll start unwrapping the layers of technology that make bitcoin possible and examine the inner workings of the bitcoin network and protocol.((("", startref="GSdefine01")))
+// In this chapter we'll get started by explaining some of the main concepts and terms, getting the necessary software, and using bitcoin for simple transactions. In following chapters we'll start unwrapping the layers of technology that make bitcoin possible and examine the inner workings of the bitcoin network and protocol.((("", startref="GSdefine01")))
+1 장에서는 주요 개념 및 용어를 설명하고 필요한 소프트웨어를 설치하며 단순한 거래에서 비트코인을 사용하는 방법을 설명할 것이다. 다음 장에서는 비트코인 시스템을 가능하게 해 주는 기술들을 공개하고 비트코인 네트워크 및 프로토콜 내부 작업을 살펴볼 것이다.((("", startref="GSdefine01")))
 
 [role="pagebreak-before less_space"]
-.Digital Currencies Before Bitcoin
+// .Digital Currencies Before Bitcoin
+.비트코인 이전의 디지털 통화
 ****
 
-((("digital currencies", "prior to bitcoin")))The emergence of viable digital money is closely linked to developments in cryptography. This is not surprising when one considers the fundamental challenges involved with using bits to represent value that can be exchanged for goods and services. Three basic questions for anyone accepting digital money are:
+// ((("digital currencies", "prior to bitcoin")))The emergence of viable digital money is closely linked to developments in cryptography. This is not surprising when one considers the fundamental challenges involved with using bits to represent value that can be exchanged for goods and services. Three basic questions for anyone accepting digital money are:
+((("digital currencies", "prior to bitcoin")))사용가능한 디지털머니의 등장은 암호학의 발전과 밀접한 연관이 있다. 재화와 용역으로 교환될 수 있는 가치를 표현하기 위해 비트 (bits)를 사용하는 것이 근본적으로 어려운 문제일 것이라고 판단하는 것은 놀라운 일이 아니다. 디지털머니를 수락하는 사람들에 대한 세 가지 기본적인 질문은 다음과 같다:
+// 1.     Can I trust that the money is authentic and not counterfeit?
+1.     이 디지털머니가 위조가 아니라 진품임을 신뢰할 수 있는가?
+// 2.     Can I trust that the digital money can only be spent once (known as the “double-spend” problem)?
+2.     디지털머니가 단 한 번만 소비되었는지 신뢰할 수 있는가 ("이중 지불"로 알려진 문제)?
+// 3.     Can I be sure that no one else can claim this money belongs to them and not me?
+3.     이 돈이 내가 아닌 자신의 소유라고 주장하는 사람이 나타나지 않을 것이라고 확신할 수 있는가?
+// Issuers of paper money are constantly battling the counterfeiting problem by using increasingly sophisticated papers and printing technology.  Physical money addresses the double-spend issue easily because the same paper note cannot be in two places at once. Of course, conventional money is also often stored and transmitted digitally. In these cases, the counterfeiting and double-spend issues are handled by clearing all electronic transactions through central authorities that have a global view of the currency in circulation. For digital money, which cannot take advantage of esoteric inks or holographic strips, cryptography provides the basis for trusting the legitimacy of a user’s claim to value.  Specifically, cryptographic digital signatures enable a user to sign a digital asset or transaction proving the ownership of that asset. With the appropriate architecture, digital signatures also can be used to address the double-spend issue.
+지폐 발행 기관들은 점점 더 정교한 용지 및 인쇄 기술을 활용함으로써 위조 지폐 문제와 끊임없이 싸우고 있다. 물리적 화폐는 동시에 다른 두 장소에서 사용될 수 없기 때문에 이중 지불 문제를 쉽게 해결한다. 물론 기존 화폐 또한 자주 디지털상으로 보관하고 송금할 수 있다. 이러한 경우에는, 유통되고 있는 통화에 대해 전 세계적으로 영향력 있는 중앙 기관을 통해 모든 전자 거래를 승인함으로써 위조 지폐 및 이중 지불 문제를 해결한다. 비밀 잉크나 홀로그램 조각을 활용할 수 없는 디지털머니의 경우, 암호학이 사용자의 가치 주장의 정당성을 신뢰하기 위한 근간을 제공한다. 구체적으로, 암호화된 전자 서명은 사용자가 디지털 자산 혹은 해당 자산에 대한 소유권을 증명하는 거래에 서명을 할 수 있게 해 준다. 적절한 아키텍처가 함께, 디지털 서명 역시 이중 지불 문제를 해결하기 위해 활용될 수 있다.
 
-1.     Can I trust that the money is authentic and not counterfeit?
-2.     Can I trust that the digital money can only be spent once (known as the “double-spend” problem)?
-3.     Can I be sure that no one else can claim this money belongs to them and not me?
+// When cryptography started becoming more broadly available and understood in the late 1980s, many researchers began trying to use cryptography to build digital currencies. These early digital currency projects issued digital money, usually backed by a national currency or precious metal such as gold.
+1980년대 후반에 암호학의 사용 범위가 넓어지고 이를 이해하는 사람이 늘면서, 많은 연구자들은 디지털 통화를 구축하기 위해 암호학을 활용하고자 했다. 이러한 초기 디지털 통화 프로젝트들은 대개 국가 통화나 금과 같은 귀금속과 연관된 디지털머니를 발행했다.
 
-Issuers of paper money are constantly battling the counterfeiting problem by using increasingly sophisticated papers and printing technology.  Physical money addresses the double-spend issue easily because the same paper note cannot be in two places at once. Of course, conventional money is also often stored and transmitted digitally. In these cases, the counterfeiting and double-spend issues are handled by clearing all electronic transactions through central authorities that have a global view of the currency in circulation. For digital money, which cannot take advantage of esoteric inks or holographic strips, cryptography provides the basis for trusting the legitimacy of a user’s claim to value.  Specifically, cryptographic digital signatures enable a user to sign a digital asset or transaction proving the ownership of that asset. With the appropriate architecture, digital signatures also can be used to address the double-spend issue.
-
-When cryptography started becoming more broadly available and understood in the late 1980s, many researchers began trying to use cryptography to build digital currencies. These early digital currency projects issued digital money, usually backed by a national currency or precious metal such as gold.
-
-((("decentralized systems", "vs. centralized", secondary-sortas="centralized")))Although these earlier digital currencies worked, they were centralized and, as a result, were easy to attack by governments and hackers. Early digital currencies used a central clearinghouse to settle all transactions at regular intervals, just like a traditional banking system. Unfortunately, in most cases these nascent digital currencies were targeted by worried governments and eventually litigated out of existence. Some failed in spectacular crashes when the parent company liquidated abruptly. To be robust against intervention by antagonists, whether legitimate governments or criminal elements, a _decentralized_ digital currency was needed to avoid a single point of attack. Bitcoin is such a system, decentralized by design, and free of any central authority or point of control that can be attacked or corrupted.
+// ((("decentralized systems", "vs. centralized", secondary-sortas="centralized")))Although these earlier digital currencies worked, they were centralized and, as a result, were easy to attack by governments and hackers. Early digital currencies used a central clearinghouse to settle all transactions at regular intervals, just like a traditional banking system. Unfortunately, in most cases these nascent digital currencies were targeted by worried governments and eventually litigated out of existence. Some failed in spectacular crashes when the parent company liquidated abruptly. To be robust against intervention by antagonists, whether legitimate governments or criminal elements, a _decentralized_ digital currency was needed to avoid a single point of attack. Bitcoin is such a system, decentralized by design, and free of any central authority or point of control that can be attacked or corrupted.
+((("decentralized systems", "vs. centralized", secondary-sortas="centralized")))이러한 초기 디지털 통화는 효과가 있었지만, 중앙 통제 방식이었기 때문에 결과적으로 정부나 해커들로부터 공격받기 쉬웠다. 초기 디지털 통화는 전형적인 은행 시스템처럼 주기적으로 모든 거래를 정산하기 위해 중앙 클리어링하우스를 이용했다. 하지만 안타깝게도 각국 정부들의 염려 속에 초기 디지털 통화들은 표적이 되어 결국에는 소멸되었다. 일부는 모회사가 갑자기 파산하면서 극단적인 결과와 함께 실패했다. 합법적인 정부이든 범죄 집단이든 비트코인에 적대 세력의 개입에 강력하게 대처하기 위해서는, _탈중앙화된_ 디지털 통화는 단일 공격 지점 (single point of attack)을 피해야 했다. 비트코인은 설계적으로는 탈중앙화된 시스템이며, 중앙 권력이나 공격이나 부패 가능성이 있는 통제소로부터 자유롭다.  
 
 ****
 
