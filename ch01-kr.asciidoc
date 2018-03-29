@@ -43,11 +43,13 @@
 // ((("digital currencies", "prior to bitcoin")))The emergence of viable digital money is closely linked to developments in cryptography. This is not surprising when one considers the fundamental challenges involved with using bits to represent value that can be exchanged for goods and services. Three basic questions for anyone accepting digital money are:
 ((("digital currencies", "prior to bitcoin")))사용가능한 디지털머니의 등장은 암호학의 발전과 밀접한 연관이 있다. 재화와 용역으로 교환될 수 있는 가치를 표현하기 위해 비트 (bits)를 사용하는 것이 근본적으로 어려운 문제일 것이라고 판단하는 것은 놀라운 일이 아니다. 디지털머니를 수락하는 사람들에 대한 세 가지 기본적인 질문은 다음과 같다:
 // 1.     Can I trust that the money is authentic and not counterfeit?
+
 1.     이 디지털머니가 위조가 아니라 진품임을 신뢰할 수 있는가?
 // 2.     Can I trust that the digital money can only be spent once (known as the “double-spend” problem)?
 2.     디지털머니가 단 한 번만 소비되었는지 신뢰할 수 있는가 ("이중 지불"로 알려진 문제)?
 // 3.     Can I be sure that no one else can claim this money belongs to them and not me?
 3.     이 돈이 내가 아닌 자신의 소유라고 주장하는 사람이 나타나지 않을 것이라고 확신할 수 있는가?
+
 // Issuers of paper money are constantly battling the counterfeiting problem by using increasingly sophisticated papers and printing technology.  Physical money addresses the double-spend issue easily because the same paper note cannot be in two places at once. Of course, conventional money is also often stored and transmitted digitally. In these cases, the counterfeiting and double-spend issues are handled by clearing all electronic transactions through central authorities that have a global view of the currency in circulation. For digital money, which cannot take advantage of esoteric inks or holographic strips, cryptography provides the basis for trusting the legitimacy of a user’s claim to value.  Specifically, cryptographic digital signatures enable a user to sign a digital asset or transaction proving the ownership of that asset. With the appropriate architecture, digital signatures also can be used to address the double-spend issue.
 지폐 발행 기관들은 점점 더 정교한 용지 및 인쇄 기술을 활용함으로써 위조 지폐 문제와 끊임없이 싸우고 있다. 물리적 화폐는 동시에 다른 두 장소에서 사용될 수 없기 때문에 이중 지불 문제를 쉽게 해결한다. 물론 기존 화폐 또한 자주 디지털상으로 보관하고 송금할 수 있다. 이러한 경우에는, 유통되고 있는 통화에 대해 전 세계적으로 영향력 있는 중앙 기관을 통해 모든 전자 거래를 승인함으로써 위조 지폐 및 이중 지불 문제를 해결한다. 비밀 잉크나 홀로그램 조각을 활용할 수 없는 디지털머니의 경우, 암호학이 사용자의 가치 주장의 정당성을 신뢰하기 위한 근간을 제공한다. 구체적으로, 암호화된 전자 서명은 사용자가 디지털 자산 혹은 해당 자산에 대한 소유권을 증명하는 거래에 서명을 할 수 있게 해 준다. 적절한 아키텍처가 함께, 디지털 서명 역시 이중 지불 문제를 해결하기 위해 활용될 수 있다.
 
@@ -55,7 +57,7 @@
 1980년대 후반에 암호학의 사용 범위가 넓어지고 이를 이해하는 사람이 늘면서, 많은 연구자들은 디지털 통화를 구축하기 위해 암호학을 활용하고자 했다. 이러한 초기 디지털 통화 프로젝트들은 대개 국가 통화나 금과 같은 귀금속과 연관된 디지털머니를 발행했다.
 
 // ((("decentralized systems", "vs. centralized", secondary-sortas="centralized")))Although these earlier digital currencies worked, they were centralized and, as a result, were easy to attack by governments and hackers. Early digital currencies used a central clearinghouse to settle all transactions at regular intervals, just like a traditional banking system. Unfortunately, in most cases these nascent digital currencies were targeted by worried governments and eventually litigated out of existence. Some failed in spectacular crashes when the parent company liquidated abruptly. To be robust against intervention by antagonists, whether legitimate governments or criminal elements, a _decentralized_ digital currency was needed to avoid a single point of attack. Bitcoin is such a system, decentralized by design, and free of any central authority or point of control that can be attacked or corrupted.
-((("decentralized systems", "vs. centralized", secondary-sortas="centralized")))이러한 초기 디지털 통화는 효과가 있었지만, 중앙 통제 방식이었기 때문에 결과적으로 정부나 해커들로부터 공격받기 쉬웠다. 초기 디지털 통화는 전형적인 은행 시스템처럼 주기적으로 모든 거래를 정산하기 위해 중앙 클리어링하우스를 이용했다. 하지만 안타깝게도 각국 정부들의 염려 속에 초기 디지털 통화들은 표적이 되어 결국에는 소멸되었다. 일부는 모회사가 갑자기 파산하면서 극단적인 결과와 함께 실패했다. 합법적인 정부이든 범죄 집단이든 비트코인에 적대 세력의 개입에 강력하게 대처하기 위해서는, _탈중앙화된_ 디지털 통화는 단일 공격 지점 (single point of attack)을 피해야 했다. 비트코인은 설계적으로는 탈중앙화된 시스템이며, 중앙 권력이나 공격이나 부패 가능성이 있는 통제소로부터 자유롭다.  
+((("decentralized systems", "vs. centralized", secondary-sortas="centralized")))이러한 초기 디지털 통화는 효과가 있었지만, 중앙 통제 방식이었기 때문에 결과적으로 정부나 해커들로부터 공격받기 쉬웠다. 초기 디지털 통화는 전형적인 은행 시스템처럼 주기적으로 모든 거래를 정산하기 위해 중앙 클리어링하우스를 이용했다. 하지만 안타깝게도 각국 정부들의 염려 속에 초기 디지털 통화들은 표적이 되어 결국에는 소멸되었다. 일부는 모회사가 갑자기 파산하면서 극단적인 결과와 함께 실패했다. 합법적인 정부이든 범죄 집단이든 비트코인에 적대 세력의 개입에 강력하게 대처하기 위해서는, _탈중앙화된_ 디지털 통화는 단일 공격 지점 (single point of attack)을 피해야 했다. 비트코인은 설계적으로는 탈중앙화된 시스템이며, 중앙 권력이나 공격이나 부패 가능성이 있는 통제소로부터 자유롭다.
 
 ****
 
