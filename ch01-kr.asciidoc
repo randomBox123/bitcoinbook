@@ -208,7 +208,7 @@ image::images/mbc2_0101.png["MyceliumWelcome"]
 // Alice is now ready to start using her new bitcoin wallet.((("", startref="GSquick01")))((("", startref="Wquick01")))
 앨리스는 이제 그녀의 비트코인 지갑을 사용할 준비가 되었다.((("", startref="GSquick01")))((("", startref="Wquick01")))
 
-// [[getting_first_bitcoin]]
+[[getting_first_bitcoin]]
 [[비트코인 시작하기]]
 // ==== Getting Your First Bitcoin
 ==== 비트코인 시작하기
@@ -224,7 +224,7 @@ image::images/mbc2_0101.png["MyceliumWelcome"]
 새로운 사용자가 비트코인을 얻을 수 있는 방법 몇 가지를 소개한다:
 
 // * Find a friend who has bitcoin and buy some from him or her directly. Many bitcoin users start this way. This method is the least complicated. One way to meet people with bitcoin is to attend a local bitcoin meetup listed at https://bitcoin.meetup.com[Meetup.com].
-*비트코인을 소유한 친구를 찾아서 그나 그녀에게서 직접적으로 구매하라. 대다수 비트코인 사용자가 이렇게 시작한다. 이 방법은 가장 덜 복잡한 방법이다. 비트코인을 소유한 사람을 만나는 한 가지 방법은 비트코인 밋업에 참석하는 것이며 https://bitcoin.meetup.com[Meetup.com]에서 확인할 수 있다.
+* 비트코인을 소유한 친구를 찾아서 그나 그녀에게서 직접적으로 구매하라. 대다수 비트코인 사용자가 이렇게 시작한다. 이 방법은 가장 덜 복잡한 방법이다. 비트코인을 소유한 사람을 만나는 한 가지 방법은 비트코인 밋업에 참석하는 것이며 https://bitcoin.meetup.com[Meetup.com]에서 확인할 수 있다.
 // * Use a classified service such as pass:[<a class="orm:hideurl" href="https://localbitcoins.com/">localbitcoins.com</a>] to find a seller in your area to buy bitcoin for cash in an in-person transaction.
 * pass:[<a class="orm:hideurl" href="https://localbitcoins.com/">localbitcoins.com</a>]와 같은 서비스를 사용하여 당신의 지역에서 비트코인 현금거래를 하는 판매자를 찾자.
 // * Earn bitcoin by selling a product or service for bitcoin. If you are a programmer, sell your programming skills. If you're a hairdresser, cut hair for bitcoin.
