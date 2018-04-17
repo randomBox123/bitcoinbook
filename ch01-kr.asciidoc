@@ -232,57 +232,80 @@ image::images/mbc2_0101.png["MyceliumWelcome"]
 // * ((("Coin ATM Radar")))((("ATMs, locating")))Use a bitcoin ATM in your city.  A bitcoin ATM is a machine that accepts cash and sends bitcoin to your smartphone bitcoin wallet. Find a bitcoin ATM close to you using an online map from http://coinatmradar.com[Coin ATM Radar].
 * ((("Coin ATM Radar")))((("ATMs, locating")))근교의 비트코인 ATM을 이용하자. 비트코인 ATM은 현금 결제를 통해 당신의 스마트폰 비트코인 지갑으로 비트코인을 전송한다. http://coinatmradar.com[Coin ATM Radar]에서 제공하는 온라인 지도를 활용하여 당신 근처의 비트코인 ATM을 찾자.
 // * ((("exchange rates", "listing services")))Use a bitcoin currency exchange linked to your bank account. Many countries now have currency exchanges that offer a market for buyers and sellers to swap bitcoin with local currency. Exchange-rate listing services, such as https://bitcoinaverage.com[BitcoinAverage], often show a list of bitcoin exchanges for each currency.
-* ((("exchange rates", "listing services")))당신의 은행 계좌와 연계된 비트코인 통화 거래소를 사용하자. 현재 판매자와 구매자가 현지 통화로 비트코인 교환을 할 수 있는 시장을 제공하는 통화 거래소가 많은 국가에 존재한다. https://bitcoinaverage.com[BitcoinAverage]와 같은 환율 목록 서비스는 주로 각 통화에 대한 비트코인 환율 목록을 제공한다.
+* ((("exchange rates", "listing services")))당신의 은행 계좌와 연계된 비트코인 통화 거래소를 사용하자. 현재 많은 국가에 판매자와 구매자가 현지 통화로 비트코인을 교환할 수 있는 시장을 제공하는 통화 거래소가 존재한다. https://bitcoinaverage.com[BitcoinAverage]와 같은 환율 목록 서비스는 주로 각 통화에 대한 비트코인 환율 목록을 제공한다.
 
 [TIP]
 ====
-((("privacy, maintaining")))((("security", "maintaining privacy")))((("digital currencies", "currency exchanges")))((("currency exchanges")))((("digital currencies", "benefits of bitcoin")))((("bitcoin", "benefits of")))One of the advantages of bitcoin over other payment systems is that, when used correctly, it affords users much more privacy. Acquiring, holding, and spending bitcoin does not require you to divulge sensitive and personally identifiable information to third parties. However, where bitcoin touches traditional systems, such as currency exchanges, national and international regulations often apply. In order to exchange bitcoin for your national currency, you will often be required to provide proof of identity and banking information. Users should be aware that once a bitcoin address is attached to an identity, all associated bitcoin transactions are also easy to identify and track. This is one reason many users choose to maintain dedicated exchange accounts unlinked to their wallets.
+// ((("privacy, maintaining")))((("security", "maintaining privacy")))((("digital currencies", "currency exchanges")))((("currency exchanges")))((("digital currencies", "benefits of bitcoin")))((("bitcoin", "benefits of")))One of the advantages of bitcoin over other payment systems is that, when used correctly, it affords users much more privacy. Acquiring, holding, and spending bitcoin does not require you to divulge sensitive and personally identifiable information to third parties. However, where bitcoin touches traditional systems, such as currency exchanges, national and international regulations often apply. In order to exchange bitcoin for your national currency, you will often be required to provide proof of identity and banking information. Users should be aware that once a bitcoin address is attached to an identity, all associated bitcoin transactions are also easy to identify and track. This is one reason many users choose to maintain dedicated exchange accounts unlinked to their wallets.
+((("privacy, maintaining")))((("security", "maintaining privacy")))((("digital currencies", "currency exchanges")))((("currency exchanges")))((("digital currencies", "benefits of bitcoin")))((("bitcoin", "benefits of")))다른 결제 시스템과 비교하여 비트코인의 장점 중 하나는 올바르게 사용한다면 사용자에게 더 큰 프라이버시를 제공한다는 것이다. 비트코인을 취득, 보유 및 지출하는 경우에도 민감하며 개인적으로 식별가능한 정보를 제 3자에게 노출할 필요가 없다. 그러나 비트코인이 통화 거래소와 같은 기존 시스템을 거치게 되면 주로 국가 및 국제적인 규정이 적용된다. 당신의 자국 통화로 비트코인을 교환하려면 신원 정보 및 은행 정보를 제공해야 할 것이다. 사용자는 비트코인 주소가 신원에 연동된 후에는 비트코인 거래와 연관된 모든 정보는 쉽게 확인되고 추적될 수 있음을 인지해야 한다. 이것이 바로 많은 사용자가 그들의 지갑에 교환 계정을 연결하지 않기로 선택한 이유 중 하나이다.
 ====
 
-Alice was introduced to bitcoin by a friend so she has an easy way to acquire her first bitcoin. Next, we will look at how she buys bitcoin from her friend Joe and how Joe sends the bitcoin to her wallet.
+// Alice was introduced to bitcoin by a friend so she has an easy way to acquire her first bitcoin. Next, we will look at how she buys bitcoin from her friend Joe and how Joe sends the bitcoin to her wallet.
+앨리스는 친구가 비트코인에 대해 알려 주었기 때문에 첫 번째 비트코인을 취득하는 쉬운 방법이 있다. 다음에는 앨리스가 친구 조로부터 비트코인을 구매하는 방법과 조가 앨리스의 지갑으로 비트코인을 전송하는 방법에 대해 살펴볼 것이다.
 
 [[bitcoin_price]]
-==== Finding the Current Price of Bitcoin
+// ==== Finding the Current Price of Bitcoin
+====비트코인 현재 가격 찾기
 
-((("getting started", "exchange rates")))((("exchange rates", "determining")))Before Alice can buy bitcoin from Joe, they have to agree on the _exchange rate_ between bitcoin and US dollars. This brings up a common question for those new to bitcoin: "Who sets the bitcoin price?" The short answer is that the price is set by markets.
+// ((("getting started", "exchange rates")))((("exchange rates", "determining")))Before Alice can buy bitcoin from Joe, they have to agree on the _exchange rate_ between bitcoin and US dollars. This brings up a common question for those new to bitcoin: "Who sets the bitcoin price?" The short answer is that the price is set by markets.
+((("getting started", "exchange rates")))((("exchange rates", "determining")))앨리스가 조에게서 비트코인을 구매하기 전에, 그들은 비트코인과 달러간 _환율_ 을 정해야 한다. 비트코인을 사용하는 새로운 사용자들은 다음과 같은 질문을 떠올릴 것이다: "누가 비트코인 가격을 정하는 것이지?" 이 질문에 대한 간단한 대답은 시장에 의해 가격이 결정된다는 것이다.
 
-((("exchange rates", "floating")))((("floating exchange rate")))Bitcoin, like most other currencies, has a _floating exchange rate_. That means that the value of bitcoin vis-a-vis any other currency fluctuates according to supply and demand in the various markets where it is traded. For example, the "price" of bitcoin in US dollars is calculated in each market based on the most recent trade of bitcoin and US dollars. As such, the price tends to fluctuate minutely several times per second. A pricing service will aggregate the prices from several markets and calculate a volume-weighted average representing the broad market exchange rate of a currency pair (e.g., BTC/USD).
+// ((("exchange rates", "floating")))((("floating exchange rate")))Bitcoin, like most other currencies, has a _floating exchange rate_. That means that the value of bitcoin vis-a-vis any other currency fluctuates according to supply and demand in the various markets where it is traded. For example, the "price" of bitcoin in US dollars is calculated in each market based on the most recent trade of bitcoin and US dollars. As such, the price tends to fluctuate minutely several times per second. A pricing service will aggregate the prices from several markets and calculate a volume-weighted average representing the broad market exchange rate of a currency pair (e.g., BTC/USD).
+((("exchange rates", "floating")))((("floating exchange rate")))대다수 화폐와 유사하게 비트코인은 _변동 환율제 (floating exchange rate)_ 이다. 즉, 다른 통화에 대한 비트코인의 가치는 비트코인이 거래되는 다양한 시장의 수요와 공급에 따라 변동된다. 예를 들어, 달러로 교환되는 비트코인의 "가격"은 비트코인과 달러의 가장 최근 거래를 기반으로 하여 각 시장에서 계산된다. 따라서 가격은 초당 몇 번씩 미세하게 변동되는 경향이 있다. 가격 서비스는 여러 시장의 가격을 합산하고 통화 조합 (즉, BTC/USD)의 다수 시장의 환율을 나타내는 볼륨 가중 평균을 계산한다.
 
-There are hundreds of applications and websites that can provide the current market rate. Here are some of the most popular:
+// There are hundreds of applications and websites that can provide the current market rate. Here are some of the most popular:
+현재 시장 환율을 제공하는 많은 어플리케이션과 웹사이트가 있다. 다음은 이들 중 가장 유명한 곳을 나열한 것이다:
 
-http://bitcoinaverage.com/[Bitcoin Average]:: ((("BitcoinAverage")))A site that provides a simple view of the volume-weighted-average for each currency.
-http://coincap.io/[CoinCap]:: A service listing the market capitalization and exchange rates of hundreds of crypto-currencies, including bitcoin.
-http://bit.ly/cmebrr[Chicago Mercantile Exchange Bitcoin Reference Rate]:: A reference rate that can be used for institutional and contractual reference, provided as part of investment data feeds by the CME.
+// http://bitcoinaverage.com/[Bitcoin Average]:: ((("BitcoinAverage")))A site that provides a simple view of the volume-weighted-average for each currency.
+http://bitcoinaverage.com/[Bitcoin Average]:: ((("BitcoinAverage")))각 통화에 대한 볼륨 가중 평균에 대해 간단하게 제공하는 사이트
+// http://coincap.io/[CoinCap]:: A service listing the market capitalization and exchange rates of hundreds of crypto-currencies, including bitcoin.
+http://coincap.io/[CoinCap]:: 비트코인을 포함하여 다수의 암호화폐에 대한 환율과 시장 점유율을 제공하는 서비스
+// http://bit.ly/cmebrr[Chicago Mercantile Exchange Bitcoin Reference Rate]:: A reference rate that can be used for institutional and contractual reference, provided as part of investment data feeds by the CME.
+http://bit.ly/cmebrr[Chicago Mercantile Exchange Bitcoin Reference Rate]::CME의 투자 데이터 피드의 일부로 제공되는 제도적 및 계약상의 참조에 사용될 수 있는 참조 비율
 
-In addition to these various sites and applications, most bitcoin wallets will automatically convert amounts between bitcoin and other currencies. Joe will use his wallet to convert the price automatically before sending bitcoin to Alice.
+// In addition to these various sites and applications, most bitcoin wallets will automatically convert amounts between bitcoin and other currencies. Joe will use his wallet to convert the price automatically before sending bitcoin to Alice.
+이러한 다양한 사이트 및 어플리케이션 뿐만 아니라 대다수 비트코인 지갑은 자동적으로 비트코인과 다른 통화 사이를 변환해 준다. 조는 앨리스에게 비트코인을 전송하기 전에 그의 지갑을 사용하여 자동적으로 가격을 변환할 것이다.
 
 [[sending_receiving]]
-==== Sending and Receiving Bitcoin
+// ==== Sending and Receiving Bitcoin
+==== 비트코인 주고 받기
 
 
-((("getting started", "sending and receiving bitcoin", id="GSsend01")))((("spending bitcoin", "bitcoin wallet quick start example")))((("spending bitcoin", see="also transactions")))Alice has decided to exchange $10 US dollars for bitcoin, so as not to risk too much money on this new technology. She gives Joe $10 in cash, opens her Mycelium wallet application, and selects Receive. This displays a QR code with Alice's first bitcoin address.
+// ((("getting started", "sending and receiving bitcoin", id="GSsend01")))((("spending bitcoin", "bitcoin wallet quick start example")))((("spending bitcoin", see="also transactions")))Alice has decided to exchange $10 US dollars for bitcoin, so as not to risk too much money on this new technology. She gives Joe $10 in cash, opens her Mycelium wallet application, and selects Receive. This displays a QR code with Alice's first bitcoin address.
+((("getting started", "sending and receiving bitcoin", id="GSsend01")))((("spending bitcoin", "bitcoin wallet quick start example")))((("spending bitcoin", see="also transactions")))앨리스는 10달러만 비트코인으로 환전하기로 결정했고, 이 새로운 기술에 많은 돈을 투자하는 것은 위험하다고 생각했다. 그녀는 조에게 10달러를 지불했고 Mycelium 지갑을 열고 수신버튼을 눌렀다. 이 어플리케이션에서는 앨리스의 최초의 비트코인 주소와 함께 QR코드를 표시했다.
 
-Joe then selects Send on his smartphone wallet and is presented with a screen containing two inputs:
+// Joe then selects Send on his smartphone wallet and is presented with a screen containing two inputs:
+그 후 조는 그의 스마트폰 지갑에서 전송 버튼을 눌렀고 다음의 두 가지를 입력하라는 화면이 나타났다:
 
-* A destination bitcoin address
-* The amount to send, in bitcoin (BTC) or his local currency (USD)
+// * A destination bitcoin address
+* 입금될 비트코인 주소
+// * The amount to send, in bitcoin (BTC) or his local currency (USD)
+* 비트코인 (BTC) 또는 자국 화폐 (USD)로 전송할 금액
 
-In the input field for the bitcoin address, there is a small icon that looks like a QR code. This allows Joe to scan the barcode with his smartphone camera so that he doesn't have to type in Alice's bitcoin address, which is quite long and difficult to type. Joe taps the QR code icon and activates the smartphone camera, scanning the QR code displayed on Alice's smartphone.
+// In the input field for the bitcoin address, there is a small icon that looks like a QR code. This allows Joe to scan the barcode with his smartphone camera so that he doesn't have to type in Alice's bitcoin address, which is quite long and difficult to type. Joe taps the QR code icon and activates the smartphone camera, scanning the QR code displayed on Alice's smartphone.
+비트코인 주소를 입력하는 공간에는 QR코드처럼 보이는 작은 아이콘이 있다. 이것은 조가 스마트폰 카메라로 바코드를 스캔할 수 있게 해주므로, 조는 길고 타이핑하기 어려운 앨리스의 비트코인 주소를 하나씩 입력하지 않아도 된다. 조는 QR코드 아이콘을 눌러 스마트폰 카메라를 활성화 시키고 앨리스의 스마트폰에 표시도니 QR코드를 스캔한다.
 
-Joe now has Alice's bitcoin address set as the recipient. Joe enters the amount as $10 US dollars and his wallet converts it by accessing the most recent exchange rate from an online service. The exchange rate at the time is $100 US dollars per bitcoin, so $10 US dollars is worth 0.10 bitcoin (BTC), or 100 millibitcoin (mBTC) as shown in the screenshot from Joe's wallet (see <<airbitz-mobile-send>>).
+// Joe now has Alice's bitcoin address set as the recipient. Joe enters the amount as $10 US dollars and his wallet converts it by accessing the most recent exchange rate from an online service. The exchange rate at the time is $100 US dollars per bitcoin, so $10 US dollars is worth 0.10 bitcoin (BTC), or 100 millibitcoin (mBTC) as shown in the screenshot from Joe's wallet (see <<airbitz-mobile-send>>).
+조는 이제 앨리스의 비트코인 주소를 수신자로 설정했다. 조는 10 달러 금액을 입력하고 그의 지갑은 온라인 서비스에서 가장 최근의 환율을 활용하여 비트코인으로 변환한다. 그 당시의 1 비트코인은 100 달러였고, 10달러는 0.10 비트코인 (BTC) 또는 조의 지갑 스크린샷에 보이는 것처럼 100 밀리비트코인 (mBTC)에 해당한다 ( <<airbitz-mobile-send>>를 참고하라).
 
 [[airbitz-mobile-send]]
 [role="smallereighty"]
-.Airbitz mobile bitcoin wallet send screen
+// .Airbitz mobile bitcoin wallet send screen
+.Airbitz 모바일 비트코인 지갑 전송 화면
 image::images/mbc2_0102.png["airbitz mobile send screen"]
 
-Joe then carefully checks to make sure he has entered the correct amount, because he is about to transmit money and mistakes are irreversible. After double-checking the address and amount, he presses Send to transmit the transaction. Joe's mobile bitcoin wallet constructs a transaction that assigns 0.10 BTC to the address provided by Alice, sourcing the funds from Joe's wallet and signing the transaction with Joe's private keys. This tells the bitcoin network that Joe has authorized a transfer of value to Alice's new address. As the transaction is transmitted via the peer-to-peer protocol, it quickly propagates across the bitcoin network. In less than a second, most of the well-connected nodes in the network receive the transaction and see Alice's address for the first time.
+// Joe then carefully checks to make sure he has entered the correct amount, because he is about to transmit money and mistakes are irreversible. After double-checking the address and amount, he presses Send to transmit the transaction. Joe's mobile bitcoin wallet constructs a transaction that assigns 0.10 BTC to the address provided by Alice, sourcing the funds from Joe's wallet and signing the transaction with Joe's private keys. This tells the bitcoin network that Joe has authorized a transfer of value to Alice's new address. As the transaction is transmitted via the peer-to-peer protocol, it quickly propagates across the bitcoin network. In less than a second, most of the well-connected nodes in the network receive the transaction and see Alice's address for the first time.
+송금 시 실수가 있으면 돌이킬 수 없기 때문에 조는 정확한 금액을 입력했는지 주의를 기울여 확인한다. 비트코인 주소와 금액을 여러번 확인한 후 조는 거래를 실행하기 위해 전송 버튼을 누른다. 조의 모바일 비트코인 지갑에서 앨리스가 제공한 주소로 0.10 비트코인을 전송하는 거래가 성립되면서, 지갑에 있던 금액이 빠져나가고 조의 개인키로 거래에 서명하게 된다. 이를 통해 조가 앨리스의 새 주소로 송금을 허가했다는 것을 비트코인 네트워크에 알리게 된다. 거래가 P2P 프로토콜을 통해 이루어졌기 때문에 해당 거래는 신속하게 비트코인 네트워크로 전파된다. 1초도 되지 않아 네트워크에 연결된 노드 대부분은 거래를 수신하고 최초로 앨리스의 주소를 확인한다.
 
-Meanwhile, Alice's wallet is constantly "listening" to published transactions on the bitcoin network, looking for any that match the addresses in her wallets. A few seconds after Joe's wallet transmits the transaction, Alice's wallet will indicate that it is receiving 0.10 BTC.
+// Meanwhile, Alice's wallet is constantly "listening" to published transactions on the bitcoin network, looking for any that match the addresses in her wallets. A few seconds after Joe's wallet transmits the transaction, Alice's wallet will indicate that it is receiving 0.10 BTC.
+한편 앨리스의 지갑은 그녀의 지갑 주소와 일치하는 것을 찾으며 지속적으로 비트코인 네트워크에서 게시되는 거래를 "청취 (listening)"한다. 조의 지갑이 거래를 전송하고 몇 초 후에 앨리스의 지갑에 0.10 BTC가 수신되고 있음을 알 수 있다.
 
-.Confirmations
+// .Confirmations
+.승인
 ****
-((("getting started", "confirmations")))((("confirmations", "bitcoin wallet quick start example")))((("confirmations", see="also mining and consensus; transactions")))((("clearing", seealso="confirmations")))At first, Alice's address will show the transaction from Joe as "Unconfirmed." This means that the transaction has been propagated to the network but has not yet been recorded in the bitcoin transaction ledger, known as the blockchain. To be confirmed, a transaction must be included in a block and added to the blockchain, which happens every 10 minutes, on average. In traditional financial terms this is known as _clearing_. For more details on propagation, validation, and clearing (confirmation) of bitcoin transactions, see <<mining>>.
+// ((("getting started", "confirmations")))((("confirmations", "bitcoin wallet quick start example")))((("confirmations", see="also mining and consensus; transactions")))((("clearing", seealso="confirmations")))At first, Alice's address will show the transaction from Joe as "Unconfirmed." This means that the transaction has been propagated to the network but has not yet been recorded in the bitcoin transaction ledger, known as the blockchain. To be confirmed, a transaction must be included in a block and added to the blockchain, which happens every 10 minutes, on average. In traditional financial terms this is known as _clearing_. For more details on propagation, validation, and clearing (confirmation) of bitcoin transactions, see <<mining>>.
+((("getting started", "confirmations")))((("confirmations", "bitcoin wallet quick start example")))((("confirmations", see="also mining and consensus; transactions")))((("clearing", seealso="confirmations")))처음에는 앨리스의 주소에 조와의 거래가 "미승인 (Unconfirmed)"이라고 나올 것이다. 이는 해당 거래가 네트워크로 전파되었지만 블록체인이라는 비트코인 거래 장부에는 아직 포함되지 않았음을 의미한다. 승인되기 위해서는 거래는 블록에 반드시 포함되어야 하며 블록체인에 추가되어야 한다. 이는 평균적으로 매 10분마다 발생한다. 전형적인 경제 용어로는 _클리어링 (clearing)_ 이라고 한다. 비트코인 거래의 전파, 입증 및 클리어링 (승인)에 대한 더 자세한 내용은 <<mining>> 을 참고하라.
 ****
 
-Alice is now the proud owner of 0.10 BTC that she can spend. In the next chapter we will look at her first purchase with bitcoin, and examine the underlying transaction and propagation technologies in more detail.((("", startref="BCbasic01")))((("use cases", "buying coffee", startref="aliceone")))
+// Alice is now the proud owner of 0.10 BTC that she can spend. In the next chapter we will look at her first purchase with bitcoin, and examine the underlying transaction and propagation technologies in more detail.((("", startref="BCbasic01")))((("use cases", "buying coffee", startref="aliceone")))
+앨리스는 이제 소비 가능한 0.10 BTC를 보유한 자랑스러운 소유주가 되었다. 다음 챕터에서는 비트코인을 사용한 첫 구매를 살펴보고, 거기에 해당하는 거래 및 전파 기술에 대해 좀 더 자세히 알아 볼 것이다.((("", startref="BCbasic01")))((("use cases", "buying coffee", startref="aliceone")))
