@@ -1,61 +1,82 @@
 [[ch02_bitcoin_overview]]
-== How Bitcoin Works
+// == How Bitcoin Works
+== 비트코인 작동원리
+// === Transactions, Blocks, Mining, and the Blockchain
+=== 거래, 블록, 채굴, 그리고 블록체인
+// ((("bitcoin", "overview of", id="BCover02")))((("central trusted authority")))((("decentralized systems", "bitcoin overview", id="DCSover02")))The bitcoin system, unlike traditional banking and payment systems, is based on decentralized trust. Instead of a central trusted authority, in bitcoin, trust is achieved as an emergent property from the interactions of different participants in the bitcoin system. In this chapter, we will examine bitcoin from a high level by tracking a single transaction through the bitcoin system and watch as it becomes "trusted" and accepted by the bitcoin mechanism of distributed consensus and is finally recorded on the blockchain, the distributed ledger of all transactions. Subsequent chapters will delve into the technology behind transactions, the network, and mining.
+((("bitcoin", "overview of", id="BCover02")))((("central trusted authority")))((("decentralized systems", "bitcoin overview", id="DCSover02")))기존 은행 및 결제 시스템과는 달리 비트코인 시스템은 분산된 신뢰를 기반으로 한다. 비트코인에서는 중앙 신뢰 기관 대신 비트코인 시스템 내의 서로 다른 여러 참여자들의 상호작용으로 부터 발생하는 새로운 속성으로서 신뢰를 형성한다. 2장에서는 비트코인 시스템을 통해 진행되는 거래 과정을 추적하여 상위 단계의 비트코인을 검토하고, 분산화된 합의 (distributed consensus)라는 비트코인 메커니즘에 의해 "신뢰 (trusted)"를 얻고 승인을 받은 후 모든 거래 내역의 분장인 블록체인에 기록되는 과정을 살펴볼 것이다. 이후 챕터에서는 거래, 네트워크 및 채굴에 대해 설명할 것이다.
 
-=== Transactions, Blocks, Mining, and the Blockchain
+// ==== Bitcoin Overview
+==== 비트코인 개요
 
-((("bitcoin", "overview of", id="BCover02")))((("central trusted authority")))((("decentralized systems", "bitcoin overview", id="DCSover02")))The bitcoin system, unlike traditional banking and payment systems, is based on decentralized trust. Instead of a central trusted authority, in bitcoin, trust is achieved as an emergent property from the interactions of different participants in the bitcoin system. In this chapter, we will examine bitcoin from a high level by tracking a single transaction through the bitcoin system and watch as it becomes "trusted" and accepted by the bitcoin mechanism of distributed consensus and is finally recorded on the blockchain, the distributed ledger of all transactions. Subsequent chapters will delve into the technology behind transactions, the network, and mining.
-
-==== Bitcoin Overview
-
-In the overview diagram shown in <<bitcoin-overview>>, we see that the bitcoin system consists of users with wallets containing keys, transactions that are propagated across the network, and miners who produce (through competitive computation) the consensus blockchain, which is the authoritative ledger of all transactions.
+// In the overview diagram shown in <<bitcoin-overview>>, we see that the bitcoin system consists of users with wallets containing keys, transactions that are propagated across the network, and miners who produce (through competitive computation) the consensus blockchain, which is the authoritative ledger of all transactions.
+<<bitcoin-overview>>에 제시된 개괄 도표에서는 키를 포함한 지갑을 소유한 사용자, 네트워크상으로 전파된 거래 및 거래내역 전부를 기록한 권위 있는 장부인 합의 블록체인을 (경쟁적 연산을 통해) 생산하는 채굴자들이 비트코인 시스템을 구성함을 알 수 있다.
 
 
-((("blockchain explorer sites")))Each example in this chapter is based on an actual transaction made on the bitcoin network, simulating the interactions between the users (Joe, Alice, Bob, and Gopesh) by sending funds from one wallet to another. While tracking a transaction through the bitcoin network to the blockchain, we will use a _blockchain explorer_ site to visualize each step. A blockchain explorer is a web application that operates as a bitcoin search engine, in that it allows you to search for addresses, transactions, and blocks and see the relationships and flows between them.
+// ((("blockchain explorer sites")))Each example in this chapter is based on an actual transaction made on the bitcoin network, simulating the interactions between the users (Joe, Alice, Bob, and Gopesh) by sending funds from one wallet to another. While tracking a transaction through the bitcoin network to the blockchain, we will use a _blockchain explorer_ site to visualize each step. A blockchain explorer is a web application that operates as a bitcoin search engine, in that it allows you to search for addresses, transactions, and blocks and see the relationships and flows between them.
+((("blockchain explorer sites")))2장에서 제시될 각 사례는 비트코인 네트워크에서 이루어진 실제 거래를 기반으로 하며, 지갑간 자금 이동을 통해 사용자 (조, 앨리스, 밥, 그리고 고페시) 사이의 상호작용을 시뮬레이션한다. 비트코인 네트워크를 통해 블록체인으로의 거래를 추적하면서, _블록체인 익스플로러_ 를 사용하여 각 단계를 시각화 할 것이다. 블록체인 익스플로러는 주소, 거래 및 블록을 검색할 수 있고 그들 사이의 관계와 흐름을 파악할 수 있는 비트코인 검색 엔진으로써 작동하는 웹 어플리케이션이다.
 
 [[bitcoin-overview]]
-.Bitcoin overview
+// .Bitcoin overview
+.비트코인 개요
 image::images/mbc2_0201.png["Bitcoin Overview"]
 
-((("Bitcoin Block Explorer")))((("BlockCypher Explorer")))((("blockchain.info")))((("BitPay Insight")))Popular blockchain explorers include:
+// ((("Bitcoin Block Explorer")))((("BlockCypher Explorer")))((("blockchain.info")))((("BitPay Insight")))Popular blockchain explorers include:
+((("Bitcoin Block Explorer")))((("BlockCypher Explorer")))((("blockchain.info")))((("BitPay Insight")))인기 있는 블록체인 익스플로러를 다음과 같다:
 
 * https://live.blockcypher.com[BlockCypher Explorer]
 * https://blockchain.info[blockchain.info]
 * https://insight.bitpay.com[BitPay Insight]
 
-Each of these has a search function that can take a bitcoin address, transaction hash, block number, or block hash and retrieve corresponding information from the bitcoin network. With each transaction or block example, we will provide a URL so you can look it up yourself and study it in detail.
+// Each of these has a search function that can take a bitcoin address, transaction hash, block number, or block hash and retrieve corresponding information from the bitcoin network. With each transaction or block example, we will provide a URL so you can look it up yourself and study it in detail.
+각 서비스는 비트코인 주소, 거래 해시, 블록 번호 또는 블록 해시를 검색하여 비트코인 네트워크에서 관련 정보를 찾아낼 수 있다. 각 거래 또는 블록 예시를 통해 바로 접속할 수 있는 URL을 제공하고 이를 통해 상세하게 공부하길 바란다.
 
 
 [[cup_of_coffee]]
-==== Buying a Cup of Coffee
+// ==== Buying a Cup of Coffee
+==== 커피 구매하기
 
-((("use cases", "buying coffee", id="UCcoffee02")))Alice, introduced in the previous chapter, is a new user who has just acquired her first bitcoin. In <<getting_first_bitcoin>>, Alice met with her friend Joe to exchange some cash for bitcoin. The transaction created by Joe funded Alice's wallet with 0.10 BTC. Now Alice will make her first retail transaction, buying a cup of coffee at Bob's coffee shop in Palo Alto, California.
+// ((("use cases", "buying coffee", id="UCcoffee02")))Alice, introduced in the previous chapter, is a new user who has just acquired her first bitcoin. In <<getting_first_bitcoin>>, Alice met with her friend Joe to exchange some cash for bitcoin. The transaction created by Joe funded Alice's wallet with 0.10 BTC. Now Alice will make her first retail transaction, buying a cup of coffee at Bob's coffee shop in Palo Alto, California.
+((("use cases", "buying coffee", id="UCcoffee02")))1장에서 등장했던 앨리스는 이제 막 비트코인을 구매하여 새로운 사용자가 되었다. <<getting_first_bitcoin>>에서 앨리스는 친구인 조를 만나 현금을 비트코인으로 교환했다. 조가 생성한 거래를 통해 앨리스의 지갑에는 0.10 BTC가 전송되었다. 이제 앨리스는 캘리포니아 팔로알토에 있는 밥의 까페에서 커피를 구매하는 첫 소매 거래를 할 것이다.
 
-((("exchange rates", "determining")))Bob's Cafe recently started accepting bitcoin payments by adding a bitcoin option to its point-of-sale system. The prices at Bob's Cafe are listed in the local currency (US dollars), but at the register, customers have the option of paying in either dollars or bitcoin. Alice places her order for a cup of coffee and Bob enters it into the register, as he does for all transactions.  The point-of-sale system automatically converts the total price from US dollars to bitcoin at the prevailing market rate and displays the price in both currencies:
+// ((("exchange rates", "determining")))Bob's Cafe recently started accepting bitcoin payments by adding a bitcoin option to its point-of-sale system. The prices at Bob's Cafe are listed in the local currency (US dollars), but at the register, customers have the option of paying in either dollars or bitcoin. Alice places her order for a cup of coffee and Bob enters it into the register, as he does for all transactions.  The point-of-sale system automatically converts the total price from US dollars to bitcoin at the prevailing market rate and displays the price in both currencies:
+((("exchange rates", "determining")))밥의 까페는 최근 POS 시스템 (point-of sale system)에 비트코인 옵션을 추가하여 비트코인을 결제 수단으로 받기 시작했다. 밥의 까페 (Bob's Cafe)의 가격은 국내 통화 (US 달러) 단위로 표시되어 있지만 계산대에서는 고객이 달러와 비트코인 중에서 지불 수단을 선택할 수 있다. 앨리스는 커피 한 잔을 주문했고 밥은 계산대에 거래 내역을 입력한다. POS 시스템은 자동적으로 달러로 표기된 총 가격을 일반적인 시세에 따라 비트코인으로 전환한 후 두 가지 통화 단위에 대한 가격을 모두 보여준다.
 
+// ----
+// Total:
+// $1.50 USD
+// 0.015 BTC
+// ----
 ----
-Total:
+총 가격:
 $1.50 USD
 0.015 BTC
 ----
 
+// ((("millibits")))Bob says, "That's one-dollar-fifty, or fifteen millibits."
+((("millibits")))밥은 "1.5달러나 0.015 BTC를 지불하시면 됩니다" 라고 말한다.
 
-((("millibits")))Bob says, "That's one-dollar-fifty, or fifteen millibits."
+// ((("payment requests")))((("QR codes", "payment requests")))Bob's point-of-sale system will also automatically create a special QR code containing a _payment request_ (see <<payment-request-QR>>).
+((("payment requests")))((("QR codes", "payment requests")))또한 밥의 POS 시스템은 자동적으로 _지불 요청 (payment request)_을 포함한 QR코드를 생성할 것이다 (<<payment-request-QR>>을 참조하라).
 
-((("payment requests")))((("QR codes", "payment requests")))Bob's point-of-sale system will also automatically create a special QR code containing a _payment request_ (see <<payment-request-QR>>).
-
-Unlike a QR code that simply contains a destination bitcoin address, a payment request is a QR-encoded URL that contains a destination address, a payment amount, and a generic description such as "Bob's Cafe." This allows a bitcoin wallet application to prefill the information used to send the payment while showing a human-readable description to the user. You can scan the QR code with a bitcoin wallet application to see what Alice would see.
+// Unlike a QR code that simply contains a destination bitcoin address, a payment request is a QR-encoded URL that contains a destination address, a payment amount, and a generic description such as "Bob's Cafe." This allows a bitcoin wallet application to prefill the information used to send the payment while showing a human-readable description to the user. You can scan the QR code with a bitcoin wallet application to see what Alice would see.
+단순히 송금할 비트코인 주소만 포함한 QR코드와는 달리 지불 요청은 QR코드로 인코딩된 URL로서 송금 주소, 지불 금액 및 밥의 까페와 같은 지불과 관련된 일반적인 설명도 포함한다. 이를 통해 비트코인 지갑 어플리케이션에 지불하는 데 사용되는 정보를 미리 넣어 둘 수 있고, 동시에 사용자가 읽을 수 있는 정보도 제공한다. 당신은 비트코인 지갑 어플리케이션을 사용하여 QR코드를 스캔할 수 있고 이를 통해 앨리스가 어떤 화면을 보는 지 알 수 있다.
 
 
 [[payment-request-QR]]
-.Payment request QR code
+// .Payment request QR code
+.지불 요청 QR코드
 image::images/mbc2_0202.png["payment-request"]
 
 [TIP]
 ====
-((("QR codes", "warnings and cautions")))((("transactions", "warnings and cautions")))((("warnings and cautions", "avoid sending money to addresses appearing in book")))Try to scan this with your wallet to see the address and amount but DO NOT SEND MONEY.
+// ((("QR codes", "warnings and cautions")))((("transactions", "warnings and cautions")))((("warnings and cautions", "avoid sending money to addresses appearing in book")))Try to scan this with your wallet to see the address and amount but DO NOT SEND MONEY.
+((("QR codes", "warnings and cautions")))((("transactions", "warnings and cautions")))((("warnings and cautions", "avoid sending money to addresses appearing in book")))당신의 지갑으로 이것을 스캔해 보면 주소와 금액을 확인할 수 있다. 이 주소로 돈을 전송하지 마시오!
 ====
+
 [[payment-request-URL]]
-.The payment request QR code encodes the following URL, defined in BIP-21:
+// .The payment request QR code encodes the following URL, defined in BIP-21:
+.지불 요청 QR코드는 BIP-21에서 규정된 다음의 URL을 인코딩한다.
 ----
 bitcoin:1GdK9UzpHBzqzX2A9JFP3Di4weBwqgmoQA?
 amount=0.015&
@@ -70,9 +91,11 @@ A label for the recipient address: "Bob's Cafe"
 A description for the payment: "Purchase at Bob's Cafe"
 ----
 
-Alice uses her smartphone to scan the barcode on display. Her smartphone shows a payment of +0.0150 BTC+ to +Bob's Cafe+ and she selects Send to authorize the payment. Within a few seconds (about the same amount of time as a credit card authorization), Bob sees the transaction on the register, completing the transaction.
+// Alice uses her smartphone to scan the barcode on display. Her smartphone shows a payment of +0.0150 BTC+ to +Bob's Cafe+ and she selects Send to authorize the payment. Within a few seconds (about the same amount of time as a credit card authorization), Bob sees the transaction on the register, completing the transaction.
+앨리스는 스마트폰을 사용해 표시된 바코드를 스캔한다. 앨리스는 스마트폰을 통해 0.0150 BTC를 밥의 까페에 지불한다는 내용을 확인하고 전송 버튼을 눌러 지불을 승인한다. 몇 초 후에 (신용카드 승인 시간과 거의 유사) 밥은 계산대에서 거래가 완료되는 화면을 볼 수 있다.
 
-In the following sections, we will examine this transaction in more detail. We'll see how Alice's wallet constructed it, how it was propagated across the network, how it was verified, and finally, how Bob can spend that amount in subsequent transactions.
+// In the following sections, we will examine this transaction in more detail. We'll see how Alice's wallet constructed it, how it was propagated across the network, how it was verified, and finally, how Bob can spend that amount in subsequent transactions.
+다음 섹션에서는 이 거래에 대해 더 자세하게 살펴볼 것이다. 앨리스의 지갑이 어떻게 거래를 성사시키는지, 거래가 네트워크를 통해 어떻게 전파되는지, 해당 거래가 어떻게 검증되는지, 그리고 마지막으로 Bob이 전송받은 금액을 차후 거래에 어떻게 사용할 수 있는지에 대해 알아 볼 것이다.
 
 [NOTE]
 ====
