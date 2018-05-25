@@ -4,7 +4,7 @@
 // === Transactions, Blocks, Mining, and the Blockchain
 === 거래, 블록, 채굴, 그리고 블록체인
 // ((("bitcoin", "overview of", id="BCover02")))((("central trusted authority")))((("decentralized systems", "bitcoin overview", id="DCSover02")))The bitcoin system, unlike traditional banking and payment systems, is based on decentralized trust. Instead of a central trusted authority, in bitcoin, trust is achieved as an emergent property from the interactions of different participants in the bitcoin system. In this chapter, we will examine bitcoin from a high level by tracking a single transaction through the bitcoin system and watch as it becomes "trusted" and accepted by the bitcoin mechanism of distributed consensus and is finally recorded on the blockchain, the distributed ledger of all transactions. Subsequent chapters will delve into the technology behind transactions, the network, and mining.
-((("bitcoin", "overview of", id="BCover02")))((("central trusted authority")))((("decentralized systems", "bitcoin overview", id="DCSover02")))기존 은행 및 결제 시스템과는 달리 비트코인 시스템은 분산된 신뢰를 기반으로 한다. 비트코인에서는 중앙 신뢰 기관 대신 비트코인 시스템 내의 서로 다른 여러 참여자들의 상호작용으로 부터 발생하는 새로운 속성으로서 신뢰를 형성한다. 2장에서는 비트코인 시스템을 통해 진행되는 거래 과정을 추적하여 상위 단계의 비트코인을 검토하고, 분산화된 합의 (distributed consensus)라는 비트코인 메커니즘에 의해 "신뢰 (trusted)"를 얻고 승인을 받은 후 모든 거래 내역의 분장인 블록체인에 기록되는 과정을 살펴볼 것이다. 이후 챕터에서는 거래, 네트워크 및 채굴에 대해 설명할 것이다.
+((("bitcoin", "overview of", id="BCover02")))((("central trusted authority")))((("decentralized systems", "bitcoin overview", id="DCSover02")))기존 은행 및 결제 시스템과는 달리 비트코인 시스템은 분산된 신뢰를 기반으로 한다. 비트코인에서는 중앙 신뢰 기관 대신 비트코인 시스템 내의 서로 다른 여러 참여자들의 상호작용으로부터 발생하는 새로운 속성을 통해 신뢰를 형성한다. 2장에서는 비트코인 시스템을 통해 진행되는 거래 과정을 추적하여 상위 단계의 비트코인을 검토하고, 분산화된 합의 (distributed consensus)라는 비트코인 메커니즘에 의해 "신뢰 (trusted)"를 얻고 승인을 받은 후 모든 거래 내역의 분장인 블록체인에 기록되는 과정을 살펴볼 것이다. 이후 챕터에서는 거래, 네트워크 및 채굴에 대해 설명할 것이다.
 
 // ==== Bitcoin Overview
 ==== 비트코인 개요
@@ -22,14 +22,14 @@
 image::images/mbc2_0201.png["Bitcoin Overview"]
 
 // ((("Bitcoin Block Explorer")))((("BlockCypher Explorer")))((("blockchain.info")))((("BitPay Insight")))Popular blockchain explorers include:
-((("Bitcoin Block Explorer")))((("BlockCypher Explorer")))((("blockchain.info")))((("BitPay Insight")))인기 있는 블록체인 익스플로러를 다음과 같다:
+((("Bitcoin Block Explorer")))((("BlockCypher Explorer")))((("blockchain.info")))((("BitPay Insight")))인기 있는 블록체인 익스플로러는 다음과 같다:
 
 * https://live.blockcypher.com[BlockCypher Explorer]
 * https://blockchain.info[blockchain.info]
 * https://insight.bitpay.com[BitPay Insight]
 
 // Each of these has a search function that can take a bitcoin address, transaction hash, block number, or block hash and retrieve corresponding information from the bitcoin network. With each transaction or block example, we will provide a URL so you can look it up yourself and study it in detail.
-각 서비스는 비트코인 주소, 거래 해시, 블록 번호 또는 블록 해시를 검색하여 비트코인 네트워크에서 관련 정보를 찾아낼 수 있다. 각 거래 또는 블록 예시를 통해 바로 접속할 수 있는 URL을 제공하고 이를 통해 상세하게 공부하길 바란다.
+각 서비스는 비트코인 주소, 거래 해시, 블록 번호 또는 블록 해시를 검색하여 비트코인 네트워크에서 관련 정보를 찾아낼 수 있다. 각 거래 또는 블록 예시를 통해 바로 접속할 수 있는 URL을 제공하므로 이를 통해 상세하게 학습하길 바란다.
 
 
 [[cup_of_coffee]]
@@ -40,7 +40,7 @@ image::images/mbc2_0201.png["Bitcoin Overview"]
 ((("use cases", "buying coffee", id="UCcoffee02")))1장에서 등장했던 앨리스는 이제 막 비트코인을 구매하여 새로운 사용자가 되었다. <<getting_first_bitcoin>>에서 앨리스는 친구인 조를 만나 현금을 비트코인으로 교환했다. 조가 생성한 거래를 통해 앨리스의 지갑에는 0.10 BTC가 전송되었다. 이제 앨리스는 캘리포니아 팔로알토에 있는 밥의 까페에서 커피를 구매하는 첫 소매 거래를 할 것이다.
 
 // ((("exchange rates", "determining")))Bob's Cafe recently started accepting bitcoin payments by adding a bitcoin option to its point-of-sale system. The prices at Bob's Cafe are listed in the local currency (US dollars), but at the register, customers have the option of paying in either dollars or bitcoin. Alice places her order for a cup of coffee and Bob enters it into the register, as he does for all transactions.  The point-of-sale system automatically converts the total price from US dollars to bitcoin at the prevailing market rate and displays the price in both currencies:
-((("exchange rates", "determining")))밥의 까페는 최근 POS 시스템 (point-of sale system)에 비트코인 옵션을 추가하여 비트코인을 결제 수단으로 받기 시작했다. 밥의 까페 (Bob's Cafe)의 가격은 국내 통화 (US 달러) 단위로 표시되어 있지만 계산대에서는 고객이 달러와 비트코인 중에서 지불 수단을 선택할 수 있다. 앨리스는 커피 한 잔을 주문했고 밥은 계산대에 거래 내역을 입력한다. POS 시스템은 자동적으로 달러로 표기된 총 가격을 일반적인 시세에 따라 비트코인으로 전환한 후 두 가지 통화 단위에 대한 가격을 모두 보여준다.
+((("exchange rates", "determining")))밥의 까페는 최근 POS 시스템 (point-of sale system)에 비트코인 옵션을 추가하여 비트코인을 결제 수단으로 받기 시작했다. 밥의 까페의 가격은 국내 통화 (US 달러) 단위로 표시되어 있지만 계산대에서는 고객이 달러와 비트코인 중에서 지불 수단을 선택할 수 있다. 앨리스는 커피 한 잔을 주문했고 밥은 계산대에 거래 내역을 입력한다. POS 시스템은 자동적으로 달러로 표기된 총 가격을 일반적인 시세에 따라 비트코인으로 전환한 후 두 가지 통화 단위에 대한 가격을 모두 보여준다.
 
 // ----
 // Total:
@@ -57,7 +57,7 @@ $1.50 USD
 ((("millibits")))밥은 "1.5달러나 0.015 BTC를 지불하시면 됩니다" 라고 말한다.
 
 // ((("payment requests")))((("QR codes", "payment requests")))Bob's point-of-sale system will also automatically create a special QR code containing a _payment request_ (see <<payment-request-QR>>).
-((("payment requests")))((("QR codes", "payment requests")))또한 밥의 POS 시스템은 자동적으로 _지불 요청 (payment request)_을 포함한 QR코드를 생성할 것이다 (<<payment-request-QR>>을 참조하라).
+((("payment requests")))((("QR codes", "payment requests")))또한 밥의 POS 시스템은 자동적으로 _지불 요청 (payment request)_ 을 포함한 QR코드를 생성할 것이다 (<<payment-request-QR>>을 참조하라).
 
 // Unlike a QR code that simply contains a destination bitcoin address, a payment request is a QR-encoded URL that contains a destination address, a payment amount, and a generic description such as "Bob's Cafe." This allows a bitcoin wallet application to prefill the information used to send the payment while showing a human-readable description to the user. You can scan the QR code with a bitcoin wallet application to see what Alice would see.
 단순히 송금할 비트코인 주소만 포함한 QR코드와는 달리 지불 요청은 QR코드로 인코딩된 URL로서 송금 주소, 지불 금액 및 밥의 까페와 같은 지불과 관련된 일반적인 설명도 포함한다. 이를 통해 비트코인 지갑 어플리케이션에 지불하는 데 사용되는 정보를 미리 넣어 둘 수 있고, 동시에 사용자가 읽을 수 있는 정보도 제공한다. 당신은 비트코인 지갑 어플리케이션을 사용하여 QR코드를 스캔할 수 있고 이를 통해 앨리스가 어떤 화면을 보는 지 알 수 있다.
@@ -122,10 +122,10 @@ https://blockchain.info/tx/0627052b6f28912f2703066a912ea577f2ce4da4caa5a5fbd8a57
 ((("transactions", "defined")))간단히 설명하자면, 거래는 비트코인 소유자가 해당 비트코인을 다른 사람에게 전송하는 것을 승인했음을 네트워크에 알려주는 것이다. 새로운 소유자는 이제 소유권의 체인에서 계속해서 또 다른 소유자에게로 비트코인 전송을 승인하는 거래를 생성함으로써 비트코인을 소비할 수 있다.
 
 // ==== Transaction Inputs and Outputs
-==== 거래 입력값 (inputs)과 출력값 (outpouts)
+==== 거래 입력값 (inputs)과 출력값 (outputs)
 
 // ((("transactions", "overview of", id="Tover02")))((("outputs and inputs", "basics of")))Transactions are like lines in a double-entry bookkeeping ledger.  Each transaction contains one or more "inputs," which are like debits against a bitcoin account. On the other side of the transaction, there are one or more "outputs," which are like credits added to a bitcoin account. ((("fees", "transaction fees")))The inputs and outputs (debits and credits) do not necessarily add up to the same amount. Instead, outputs add up to slightly less than inputs and the difference represents an implied _transaction fee_, which is a small payment collected by the miner who includes the transaction in the ledger. A bitcoin transaction is shown as a bookkeeping ledger entry in <<transaction-double-entry>>.
-((("transactions", "overview of", id="Tover02")))((("outputs and inputs", "basics of")))거래는 복식부기 장부와 유사하다. 각 거래는 비트코인 계좌에서 빠져나가는 차변 (debit)인 하나 이상의 "입력값"을 포함한다. 거래의 또 다른 구성요소로서 비트코인 계좌로 들어오는 대변 (credit)인 하나 이상의 "출력값"을 포함한다. ((("fees", "transaction fees")))입력값과 출력값 (차변과 대변)의 합계가 반드시 동일할 필요는 없다. 대신 출력값의 총합은 입력값의 총합보다 약간 작아야 하며, 이 차이는 거래 속에 포함된 _거래 수수료 (transaction fee)_ 이다. 거래 수수료는 거래를 장부에 포함시킨 채굴자가 수거하는 소액의 지불금이다. 비트코인 거래는 <<transaction-double-entry>>에 표현된 것과 같이 복식부기 장부와 유사하다.
+((("transactions", "overview of", id="Tover02")))((("outputs and inputs", "basics of")))거래는 복식부기 장부와 유사하다. 각 거래는 비트코인 계좌에서 빠져나가는 차변 (debit)인 하나 이상의 "입력값"을 포함한다. 거래의 또 다른 구성요소로서 비트코인 계좌로 들어오는 대변 (credit)인 하나 이상의 "출력값"을 포함한다. ((("fees", "transaction fees")))입력값과 출력값 (차변과 대변)의 합계가 반드시 동일할 필요는 없다. 대신 출력값의 총합은 입력값의 총합보다 약간 작아야 하며, 이 차이는 거래 속에 포함된 _거래 수수료 (transaction fee)_ 이다. 거래 수수료는 거래를 장부에 포함시킨 채굴자가 수거하는 소액의 지불금이다. 비트코인 거래는 그림 <<transaction-double-entry>>에 잘 나타나 있으며 복식부기 장부와 유사하다.
 
 // The transaction also contains proof of ownership for each amount of bitcoin (inputs) whose value is being spent, in the form of a digital signature from the owner, which can be independently validated by anyone. ((("spending bitcoin", "defined")))In bitcoin terms, "spending" is signing a transaction that transfers value from a previous transaction over to a new owner identified by a bitcoin address.
 또한 각 소비되는 비트코인의 금액 (입력값)에 대한 소유권을 소유자의 디지털 서명의 형태로 증명하는 과정이 거래에 포함되며, 누구든지 독립적으로 거래를 검증할 수 있다. ((("spending bitcoin", "defined")))비트코인 용어에서, "소비 (spending)"는 이전 거래에서 송금되었던 금액이 비트코인 주소에 의해 확인된 새로운 소유자에게로 전송되는 거래에 서명함을 뜻한다.
@@ -380,4 +380,4 @@ image::images/mbc2_0209.png["Alice's transaction included in a block"]
 image::images/mbc2_0210.png["Alice's transaction as part of a transaction chain"]
 
 // In this chapter, we saw how transactions build a chain that moves value from owner to owner. We also tracked Alice's transaction, from the moment it was created in her wallet, through the bitcoin network and to the miners who recorded it on the blockchain. In the rest of this book, we will examine the specific technologies behind wallets, addresses, signatures, transactions, the network, and finally mining.((("", startref="BCover02")))((("", startref="DCSover02"))) ((("", startref="UCcoffee02")))
-이 장에서는 거래가 어떻게 소유주 사이의 가치 이동을 나타내는 체인을 구성하는지에 대해 살펴보았다. 또한 앨리스의 지갑에서 거래가 생성된 순간부터 비트코인 네트워크를 통해 이 거래를 블록체인에 기록하는 채굴자에 이르기까지 앨리스의 거래를 추적하였다. 이 책의 나머지 부분에서는 지갑, 주소, 서명, 거래, 네트워크, 및 마지막으로 채굴까지 구체적인 기술에 대해 알아 볼 것이다.사((("", startref="BCover02")))((("", startref="DCSover02"))) ((("", startref="UCcoffee02")))
+이 장에서는 거래가 어떻게 소유주 사이의 가치 이동을 나타내는 체인을 구성하는지에 대해 살펴보았다. 또한 앨리스의 지갑에서 거래가 생성된 순간부터 비트코인 네트워크를 통해 이 거래를 블록체인에 기록하는 채굴자에 이르기까지 앨리스의 거래를 추적하였다. 이 책의 나머지 부분에서는 지갑, 주소, 서명, 거래, 네트워크 및 마지막으로 채굴까지 구체적인 기술에 대해 알아 볼 것이다.((("", startref="BCover02")))((("", startref="DCSover02"))) ((("", startref="UCcoffee02")))
