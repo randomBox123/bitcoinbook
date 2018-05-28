@@ -153,14 +153,17 @@ Optional Features:
 ...
 ----
 
-The +configure+ script allows you to enable or disable certain features of +bitcoind+ through the use of the +--enable-FEATURE+ and +--disable-FEATURE+ flags, where pass:[<span class="keep-together"><code>FEATURE</code></span>] is replaced by the feature name, as listed in the help output. In this chapter, we will build the +bitcoind+ client with all the default features. We won't be using the configuration flags, but you should review them to understand what optional features are part of the client. If you are in an academic setting, computer lab restrictions may require you to install applications in your home directory (e.g., using +--prefix=$HOME+).
+// The +configure+ script allows you to enable or disable certain features of +bitcoind+ through the use of the +--enable-FEATURE+ and +--disable-FEATURE+ flags, where pass:[<span class="keep-together"><code>FEATURE</code></span>] is replaced by the feature name, as listed in the help output. In this chapter, we will build the +bitcoind+ client with all the default features. We won't be using the configuration flags, but you should review them to understand what optional features are part of the client. If you are in an academic setting, computer lab restrictions may require you to install applications in your home directory (e.g., using +--prefix=$HOME+).
++configure+ 스크립트는 +--enable-FEATURE+ 와 +--disable-FEATURE+ 플래그를 사용함으로써 +bitcoind+ 의 특정 기능을 사용하거나 사용하지 못하게 할 수 있다. 이 경우, 명령어 pass:[<span class="keep-together"><code>FEATURE</code></span>] 가 도움말 출력값 (help out)에 나열되어 있는 기능 이름으로 대체된다. 3장에서는 디폴트 (default) 기능을 가진 +bitcoind+ 클라이언트를 빌드해 볼 것이다. 여기에서는 설정 플래그 (configuration flags)를 사용하지 않을 것이지만, 어떤 선택적인 기능이 클라이언트의 일부가 되는지 이해하기 위해 설정 플래그를 검토해야 한다. 학교 환경에서 실행하는 경우, 컴퓨터 실습 제한으로 홈 디렉토리에 어플리케이션을 설치해야 할 수도 있다 (예를 들어 +--prefix=$HOME+ 를 사용함).
 
-Here are some useful options that override the default behavior of the configure script:
+// Here are some useful options that override the default behavior of the configure script:
+다음은 configure 스크립트의 디폴트를 무시하는 유용한 옵션이다:
 
 ++++
 <dl>
 <dt><code>--prefix=$HOME</code></dt>
-<dd><p>This overrides the default installation location (which is <em>/usr/local/</em>) for the resulting executable. Use <code>$HOME</code> to put everything in your home directory, or a different path.</p></dd>
+// <dd><p>This overrides the default installation location (which is <em>/usr/local/</em>) for the resulting executable. Use <code>$HOME</code> to put everything in your home directory, or a different path.</p></dd>
+<dd><p> 이것은 기본 설치 장소를 무시한다 (which is <em>/usr/local/</em>)
 
 <dt><code>--disable-wallet</code></dt>
 <dd><p>This is used to disable the reference wallet implementation.</p></dd>
@@ -173,7 +176,8 @@ Here are some useful options that override the default behavior of the configure
 </dl>
 ++++
 
-Next, run the +configure+ script to automatically discover all the necessary libraries and create a customized build script for your system:
+// Next, run the +configure+ script to automatically discover all the necessary libraries and create a customized build script for your system:
+다음으로 자동적으로 모든 필요한 라이브러리를 검색하고 운영체제에 맞는 빌드 스크립트 (build script)를 생성하기 위해 configure 스크립트를 가동한다.
 
 ----
 $ ./configure
@@ -191,11 +195,14 @@ $
 ----
 
 
-If all went well, the +configure+ command will end by creating the customized build scripts that will allow us to compile +bitcoind+. If there are any missing libraries or errors, the +configure+ command will terminate with an error instead of creating the build scripts. If an error occurs, it is most likely because of a missing or incompatible library. Review the build documentation again and make sure you install the missing prerequisites. Then run +configure+ again and see if that fixes the error.
+// If all went well, the +configure+ command will end by creating the customized build scripts that will allow us to compile +bitcoind+. If there are any missing libraries or errors, the +configure+ command will terminate with an error instead of creating the build scripts. If an error occurs, it is most likely because of a missing or incompatible library. Review the build documentation again and make sure you install the missing prerequisites. Then run +configure+ again and see if that fixes the error.
+여기까지 잘 진행되었다면, +configure+ 명령은 +bitcoind+ 를 컴파일링 할 수 있는 설정된 빌드 스크립트를 생성함으로써 종료된다. 라이브러리가 누락되거나 에러가 발생하는 경우, +configure+ 명령은 빌드 스크립트를 생성하는 대신 에러가 난 채로 종료된다. 에러가 발생한다면 대부분 라이브러리가 누락되거나 호환 불가능한 경우이다. 빌드 문서를 재검토하고 누락된 전제 조건을 확인하라. 그 후 +configure+ 를 재실행하고 에러가 고쳐졌는지 확인하라.
 
-==== Building the Bitcoin Core Executables
+// ==== Building the Bitcoin Core Executables
+==== 비트코인 코어 실행파일 (executables) 빌드
 
-((("Bitcoin Core", "compiling from source code", "core executables")))((("core executables", seealso="Bitcoin Core")))Next, you will compile the source code, a process that can take up to an hour to complete, depending on the speed of your CPU and available memory. During the compilation process you should see output every few seconds or every few minutes, or an error if something goes wrong. If an error occurs, or the compilation process is interrupted, it can be resumed any time by typing +make+ again. Type ++**make**++ to start compiling the executable application:
+// ((("Bitcoin Core", "compiling from source code", "core executables")))((("core executables", seealso="Bitcoin Core")))Next, you will compile the source code, a process that can take up to an hour to complete, depending on the speed of your CPU and available memory. During the compilation process you should see output every few seconds or every few minutes, or an error if something goes wrong. If an error occurs, or the compilation process is interrupted, it can be resumed any time by typing +make+ again. Type ++**make**++ to start compiling the executable application:
+다음은 소스코드를 컴파일링 할 것이며 이 과정은 CPU와 가용 메모리에 따라 완료까지 최대 1시간 정도 걸릴 수 있다. 컴파일링 과정 동안 몇 초 단위 혹은 몇 분 단위로 출력값을 관찰해야 한다. 그렇지 않으면 어떤 과정이 잘못되어 에러가 발생할 수 있다. 에러가 발생하거나 컴파일 과정이 중단되는 경우라면 +make+ 를 다시 입력하여 언제든지 다시 재개 할 수 있다. 실행파일 컴파일을 시작하기 위해서 ++**make**++ 를 입력하라.
 
 ----
 $ make
