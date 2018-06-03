@@ -163,19 +163,19 @@ Optional Features:
 <dl>
 <dt><code>--prefix=$HOME</code></dt>
 <dd><p>This overrides the default installation location (which is <em>/usr/local/</em>) for the resulting executable. Use <code>$HOME</code> to put everything in your home directory, or a different path.</p></dd>
-<dd><p> 이것은 기본 설치 장소를 덮어쓴다 (<em>/usr/local/</em>). 홈 디렉토리나 다른 경로에 모든 것을 같이 두기 위해 <code>$HOME</code> 를 사용하라.
+<dd><p>이것은 기본 설치 장소를 덮어쓴다 (<em>/usr/local/</em>). 홈 디렉토리나 다른 경로에 모든 것을 같이 두기 위해 <code>$HOME</code> 를 사용하라.</p></dd>
 
 <dt><code>--disable-wallet</code></dt>
 <dd><p>This is used to disable the reference wallet implementation.</p></dd>
-이것은 참조 지갑 구현을 불가능하게 할 때 사용한다.
+<dd><p>이것은 참조 지갑 구현을 불가능하게 할 때 사용한다.</p></dd>
 
 <dt><code>--with-incompatible-bdb</code></dt>
 <dd><p>If you are building a wallet, allow the use of an incompatible version of the Berkeley DB library.</p></dd>
-지갑을 구축할 때 Berkeley DB library의 호환 불가능한 버전의 사용을 가능하게 해 준다.
+<dd><p>지갑을 구축할 때 Berkeley DB library의 호환 불가능한 버전의 사용을 가능하게 해 준다.</p></dd>
 
 <dt><code>--with-gui=no</code></dt>
 <dd><p>Don't build the graphical user interface, which requires the Qt library. This builds server and command-line bitcoin only.</p></dd>
-Qt library를 필요로하는 그래픽 유저 인터페이스를 구축하지 말라. 이것은 오직 서버와 명령행 비트코인을 구축한다.
+<dd><p>Qt library를 필요로하는 그래픽 유저 인터페이스를 구축하지 말라. 이것은 오직 서버와 명령행 비트코인을 구축한다.</p></dd>
 </dl>
 ++++
 
@@ -199,7 +199,7 @@ $
 
 
 // If all went well, the +configure+ command will end by creating the customized build scripts that will allow us to compile +bitcoind+. If there are any missing libraries or errors, the +configure+ command will terminate with an error instead of creating the build scripts. If an error occurs, it is most likely because of a missing or incompatible library. Review the build documentation again and make sure you install the missing prerequisites. Then run +configure+ again and see if that fixes the error.
-여기까지 잘 진행되었다면, +configure+ 명령은 +bitcoind+ 를 컴파일링 할 수 있는 설정된 빌드 스크립트를 생성함으로써 종료된다. 라이브러리가 누락되거나 에러가 발생하는 경우, +configure+ 명령은 빌드 스크립트를 생성하는 대신 에러가 난 채로 종료된다. 에러가 발생한다면 대부분 라이브러리가 누락되거나 호환 불가능한 경우이다. 빌드 문서를 재검토하고 누락된 전제 조건을 확인하라. 그 후 +configure+ 를 재실행하고 에러가 고쳐졌는지 확인하라.
+여기까지 잘 진행되었다면, +configure+ 명령은 +bitcoind+ 를 컴파일링 할 수 있도록 설정된 빌드 스크립트를 생성함으로써 종료된다. 라이브러리가 누락되거나 에러가 발생하는 경우, +configure+ 명령은 빌드 스크립트를 생성하는 대신 에러가 난 채로 종료된다. 에러가 발생한다면 대부분 라이브러리가 누락되거나 호환 불가능한 경우이다. 빌드 문서를 재검토하고 누락된 전제 조건을 확인하라. 그 후 +configure+ 를 재실행하고 에러가 고쳐졌는지 확인하라.
 
 // ==== Building the Bitcoin Core Executables
 ==== 비트코인 코어 실행파일 (executables) 빌드
@@ -349,31 +349,42 @@ conf:: 구성 파일에 대한 대체 위치. 참조하는 구성 파일 내에 
 // datadir:: Select the directory and filesystem in which to put all the blockchain data. By default this is the _.bitcoin_ subdirectory of your home directory. Make sure this filesystem has several gigabytes of free space.
 datadir:: 모든 블록체인 데이터를 입력할 디렉토리나 파일시스템 선택. 기본적으로 홈 디렉토리의 _.bitcoin_ 서브 디렉토리다. 이 파일시스템에 몇 기가바이트의 여유 공간이 있는지 확인하라.
 
-prune:: Reduce the disk space requirements to this many megabytes, by deleting old blocks. Use this on a resource-constrained node that can't fit the full blockchain.
+// prune:: Reduce the disk space requirements to this many megabytes, by deleting old blocks. Use this on a resource-constrained node that can't fit the full blockchain.
+prune:: 오래된 블록을 삭제하여 요구하는 디스크 공간을 메가바이트 배수 단위로 줄인다. 전체 블록체인에 적합하지 않는 리소스가 제한된 노드에서 이 옵션을 사용하라.
 
-txindex:: Maintain an index of all transactions. This means a complete copy of the blockchain that allows you to programmatically retrieve any transaction by ID.
+// txindex:: Maintain an index of all transactions. This means a complete copy of the blockchain that allows you to programmatically retrieve any transaction by ID.
+txindex:: 모든 거래의 인덱스 유지. 즉, ID로 모든 거래를 프로그래밍 방식으로 검색할 수 있게 해 주는 블록체인의 완전한 복사본을 의미한다.
 
-dbcache:: The size of the UTXO cache. The default is 300 MiB. Increase this on high-end hardware and reduce the size on low-end hardware to save memory at the expense of slow disk IO.
+// dbcache:: The size of the UTXO cache. The default is 300 MiB. Increase this on high-end hardware and reduce the size on low-end hardware to save memory at the expense of slow disk IO.
+dbcache:: UTXO 캐시의 크기. 기본값은 300 MiB 이다. 고급 하드웨어에서는 이를 증가시키고 저가형 하드웨어에서는 메모리를 절약하기 위해 디스크 IO 대신 이 크기를 감소시킨다.
 
-maxconnections:: Set the maximum number of nodes from which to accept connections. Reducing this from the default will reduce your bandwidth consumption. Use if you have a data cap or pay by the gigabyte.
+// maxconnections:: Set the maximum number of nodes from which to accept connections. Reducing this from the default will reduce your bandwidth consumption. Use if you have a data cap or pay by the gigabyte.
+maxconnections:: 연결을 허용할 최대 노드 수 설정. 기본값에서 줄이면 대역폭 소비가 줄어들게 된다. 데이터 제한 용량이 있거나 기가바이트 단위로 지불하는 경우에 이 기능을 사용하라.
 
-maxmempool:: Limit the transaction memory pool to this many megabytes. Use it to reduce memory use on memory-constrained nodes.
+// maxmempool:: Limit the transaction memory pool to this many megabytes. Use it to reduce memory use on memory-constrained nodes.
+maxmempool:: 거래 내역 메모리 풀을 메가바이트 배수 단위로 제한. 메모리가 제한된 노드에서 메모리 사용을 줄이기 위해 사용하라.
 
-maxreceivebuffer/maxsendbuffer:: Limit per-connection memory buffer to this many multiples of 1000 bytes. Use on memory-constrained nodes.
+// maxreceivebuffer/maxsendbuffer:: Limit per-connection memory buffer to this many multiples of 1000 bytes. Use on memory-constrained nodes.
+maxreceivebuffer/maxsendbuffer:: 연결당 메모리 버퍼를 1000 바이트의 배수 단위로 제한. 메모리 제한 노드에서 사용하라.
 
-minrelaytxfee:: Set the minimum fee rate for transaction you will relay. Below this value, the transaction is treated nonstandard, rejected from the transaction pool and not relayed.
+// minrelaytxfee:: Set the minimum fee rate for transaction you will relay. Below this value, the transaction is treated nonstandard, rejected from the transaction pool and not relayed.
+minrelaytxfee:: 중계될 거래에 대한 최소 요금을 설정. 이 값 아래에서 이루어지는 거래는 비표준으로 처리되며 거래 풀에서 거부되고 중계되지 않는다.
 
 
 [[txindex]]
-.Transaction Database Index and txindex Option
+// .Transaction Database Index and txindex Option
+.거래 데이터베이스 인덱스 (Transaction Database Index) 및 txindex 옵션
 ****
-((("Bitcoin Core", "running core nodes", "database options")))((("transactions", "database configuration options")))((("txindex option")))((("full indexing option")))By default, Bitcoin Core builds a database containing _only_ the transactions related to the user's wallet. If you want to be able to access _any_ transaction with commands like +getrawtransaction+ (see <<exploring_and_decoding_transanctions>>), you need to configure Bitcoin Core to build a complete transaction index, which can be achieved with the +txindex+ option. Set +txindex=1+ in the Bitcoin Core configuration file. If you don't set this option at first and later set it to full indexing, you need to restart +bitcoind+ with the +-reindex+ option and wait for it to rebuild the index.
+// ((("Bitcoin Core", "running core nodes", "database options")))((("transactions", "database configuration options")))((("txindex option")))((("full indexing option")))By default, Bitcoin Core builds a database containing _only_ the transactions related to the user's wallet. If you want to be able to access _any_ transaction with commands like +getrawtransaction+ (see <<exploring_and_decoding_transanctions>>), you need to configure Bitcoin Core to build a complete transaction index, which can be achieved with the +txindex+ option. Set +txindex=1+ in the Bitcoin Core configuration file. If you don't set this option at first and later set it to full indexing, you need to restart +bitcoind+ with the +-reindex+ option and wait for it to rebuild the index.
+기본적으로 비트코인 코어는 _오직_ 사용자의 지갑과 관련된 거래만 포함하는 데이터베이스를 구축한다. +getrawtransaction+ ( <<exploring_and_decoding_transanctions>> 를 참고하라)와 같은 명령으로 이루어진 _어떤_ 거래에 접근하고 싶다면, 완전한 거래 인덱스를 구축하기 위해 +txindex+ 옵션을 사용하여 비트코인 코어를 구성해야 한다. 비트코인 코어 구성 파일에서 +txindex=1+ 로 설정하라. 처음에 이 옵션을 설정하지 않았고 이후에 풀 인덱싱을 위해 옵션을 설정하였다면, +-reindex+ 옵션을 사용하여 +bitcoind+ 를 재시작하여야 하며 인덱스를 재구축할 때까지 기다려야한다.
 ****
 
-<<full_index_node>> shows how you might combine the preceding options, with a fully indexed node, running as an API backend for a bitcoin application.
+// <<full_index_node>> shows how you might combine the preceding options, with a fully indexed node, running as an API backend for a bitcoin application.
+<<full_index_node>> 는 앞에서 설명한 옵션들을 비트코인 어플리케이션의 API 백엔드로 실행되는 완전히 인덱스된 노드와 결합하는 방법을 보여준다.
 
 [[full_index_node]]
-.Sample configuration of a full-index node
+// .Sample configuration of a full-index node
+.풀 인덱스 노드 구성 예시
 ====
 ----
 alertnotify=myemailscript.sh "Alert: %s"
@@ -382,10 +393,12 @@ txindex=1
 ----
 ====
 
-<<constrained_resources>> shows a resource-constrained node running on a smaller server.
+// <<constrained_resources>> shows a resource-constrained node running on a smaller server.
+<<constrained_resources>> 는 소규모 서버에서 실행되는 리소스 제한 노드를 보여준다.
 
 [[constrained_resources]]
-.Sample configuration of a resource-constrained system
+// .Sample configuration of a resource-constrained system
+.리소스 제한 시스템의 구성 예시
 ====
 ----
 alertnotify=myemailscript.sh "Alert: %s"
@@ -398,7 +411,8 @@ maxsendbuffer=500
 ----
 ====
 
-Once you've edited the configuration file and set the options that best represent your needs, you can test +bitcoind+ with this configuration. Run Bitcoin Core with the option +printtoconsole+ to run in the foreground with output to the console:
+// Once you've edited the configuration file and set the options that best represent your needs, you can test +bitcoind+ with this configuration. Run Bitcoin Core with the option +printtoconsole+ to run in the foreground with output to the console:
+구성 파일을 편집하고 필요로 하는 옵션을 설정하면, 이 구성으로 +bitcoind+ 를 테스트 할 수 있다. +printtoconsole+ 옵션으로 비트코인 코어를 실행하면 콘솔 출력으로 전경 (foreground)에서 실행된다.
 
 ----
 $ bitcoind -printtoconsole
@@ -434,11 +448,14 @@ Opened LevelDB successfully
 [... more startup messages ...]
 ----
 
-You can hit Ctrl-C to interrupt the process once you are satisfied that it is loading the correct settings and running as you expect.
+// You can hit Ctrl-C to interrupt the process once you are satisfied that it is loading the correct settings and running as you expect.
+올바른 설정으로 로딩하고 예상한 대로 실행 중이라면 Ctrl-C 를 눌러 이 과정을 중단할 수 있다.
 
-To run Bitcoin Core in the background as a process, start it with the +daemon+ option, as +bitcoind -daemon+.
+// To run Bitcoin Core in the background as a process, start it with the +daemon+ option, as +bitcoind -daemon+.
+백그라운드에서 Bitcoin Core를 프로세스로 실행하려면, +bitcoind -daemon+ 과 같이 +daemon+ 옵션으로 시작하라.
 
-To monitor the progress and runtime status of your bitcoin node, use the command +bitcoin-cli getblockchaininfo+:
+// To monitor the progress and runtime status of your bitcoin node, use the command +bitcoin-cli getblockchaininfo+:
+비트코인 노드의 진행 상태 및 런타임 상태를 모니터링하려면 +bitcoin-cli getblockchaininfo+ 명령을 사용하라.
 
 ----
 $ bitcoin-cli getblockchaininfo
@@ -460,13 +477,17 @@ $ bitcoin-cli getblockchaininfo
 }
 ----
 
-This shows a node with a blockchain height of 0 blocks and 83999 headers. The node currently fetches the block headers of the best chain and afterward continues to download the full blocks.
+// This shows a node with a blockchain height of 0 blocks and 83999 headers. The node currently fetches the block headers of the best chain and afterward continues to download the full blocks.
+이것은 블록체인 높이가 0 블록이고 헤더가 83999인 노드를 보여준다. 노드는 현재 가장 좋은 체인의 블록 헤더를 가져온 후 전체 블록을 계속해서 다운로드한다.
 
-Once you are happy with the configuration options you have selected, you should add bitcoin to the startup scripts in your operating system, so that it runs continuously and restarts when the operating system restarts. You will find a number of example startup scripts for various operating systems in bitcoin's source directory under _contrib/init_ and a _README.md_ file showing which system uses which script.((("", startref="BCnode03")))((("", startref="BNcore03")))
+// Once you are happy with the configuration options you have selected, you should add bitcoin to the startup scripts in your operating system, so that it runs continuously and restarts when the operating system restarts. You will find a number of example startup scripts for various operating systems in bitcoin's source directory under _contrib/init_ and a _README.md_ file showing which system uses which script.((("", startref="BCnode03")))((("", startref="BNcore03")))
+선택한 구성 옵션에 만족한다면 운영 체제의 시작 스크립트에 비트코인을 추가하여 비트코인이 지속적으로 실행되고 운영 체제가 재시작될 때 동시에 재시작될 수 있도록 하여야 한다. 시스템이 어떤 스크립트를 사용하는가를 보여주는 비트코인 소스 스크립트의 _contrib/init_ 및 _README.md_ 파일에서 다양한 운영체제용 시작 스크립트의 많은 예를 찾아볼 수 있다.((("", startref="BCnode03")))((("", startref="BNcore03")))
 
-=== Bitcoin Core Application Programming Interface (API)
+// === Bitcoin Core Application Programming Interface (API)
+=== 비트코인 코어 응용 프로그램 인터페이스 (API)
 
-((("Bitcoin Core", "Bitcoin Core API", id="BCapi03")))The Bitcoin Core client implements a JSON-RPC interface that can also be accessed using the command-line helper +bitcoin-cli+. The command line allows us to experiment interactively with the capabilities that are also available programmatically via the API. ((("Bitcoin Core", "Bitcoin Core API", "RPC commands")))To start, invoke the +help+ command to see a list of the available bitcoin RPC commands:
+// ((("Bitcoin Core", "Bitcoin Core API", id="BCapi03")))The Bitcoin Core client implements a JSON-RPC interface that can also be accessed using the command-line helper +bitcoin-cli+. The command line allows us to experiment interactively with the capabilities that are also available programmatically via the API. ((("Bitcoin Core", "Bitcoin Core API", "RPC commands")))To start, invoke the +help+ command to see a list of the available bitcoin RPC commands:
+((("Bitcoin Core", "Bitcoin Core API", id="BCapi03")))비트코인 코어 클라이언트는 JSON-RPC 인터페이스를 실행하며 명령행 헬퍼 (helper)인 +bitcoin-cli+ 를 사용하여 인터페이스에 접속할 수도 있다. 명령행을 이용하면 API를 통해 프로그램적으로 사용 가능한 기능을 활용해 양방향으로 실험이 가능하다. ((("Bitcoin Core", "Bitcoin Core API", "RPC commands")))우선 사용 가능한 비트코인 RPC 명령어의 목록을 확인하기 위해 +help+ 명령어를 작동해 보자.
 
 [[bitcoind_commands]]
 
@@ -486,7 +507,8 @@ walletpassphrase "passphrase" timeout
 walletpassphrasechange "oldpassphrase" "newpassphrase"
 ----
 
-Each of these commands may take a number of parameters. To get additional help, a detailed description, and information on the parameters, add the command name after +help+. For example, to see help on the +getblockhash+ RPC command:
+// Each of these commands may take a number of parameters. To get additional help, a detailed description, and information on the parameters, add the command name after +help+. For example, to see help on the +getblockhash+ RPC command:
+이 명령들 각각은 많은 매개변수를 가질 수 있다. 매개변수에 대한 추가적인 도움말, 자세한 설명 및 정보가 필요하다면 +help+ 다음에 명령어 이름을 추가하라. 예를 들어 +getblockhash+ RPC 명령에 대한 도움말은 다음과 같이 확인할 수 있다.
 
 ----
 $ bitcoin-cli help getblockhash
@@ -505,22 +527,28 @@ Examples:
 > curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockhash", "params": [1000] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ----
 
-At the end of the help information you will see two examples of the RPC command, using the +bitcoin-cli+ helper or the HTTP client +curl+. These examples demonstrate how you might call the command. Copy the first example and see the result:
+// At the end of the help information you will see two examples of the RPC command, using the +bitcoin-cli+ helper or the HTTP client +curl+. These examples demonstrate how you might call the command. Copy the first example and see the result:
+도움말 정보 끝에서는 +bitcoin-cli+ 헬퍼나 HTTP 클라이언트 +curl+ 을 활용한 RPC 명령의 두 가지 예를 확인할 수 있다. 이 예들은 사용자가 명령을 호출하는 방법을 보여준다. 첫 번째 예를 복사하여 결과를 확인하라.
 
 ----
 $ bitcoin-cli getblockhash 1000
 00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09
 ----
 
-The result is a block hash, which is described in more detail in the following chapters. But for now, this command should return the same result on your system, demonstrating that your Bitcoin Core node is running, is accepting commands, and has information about block 1000 to return to you.
+// The result is a block hash, which is described in more detail in the following chapters. But for now, this command should return the same result on your system, demonstrating that your Bitcoin Core node is running, is accepting commands, and has information about block 1000 to return to you.
+다음 장에서 자세하게 설명될 블록해시가 결과인 것을 확인할 수 있다. 그러나 현재부터는 이 명령은 비트코인 코어 노드가 실행 중이며, 명령을 수락하고 블록 1000에 대한 정보가 반환된다는 것을 증명하면서 시스템에서 항상 동일한 결과를 반환해야 한다.
 
-In the next sections we will demonstrate some very useful RPC commands and their expected output.
+// In the next sections we will demonstrate some very useful RPC commands and their expected output.
+다음 섹션에서는 일부 유용한 RPC 명령과 예상되는 출력물을 살펴볼 것이다.
 
-==== Getting Information on the Bitcoin Core Client Status
+// ==== Getting Information on the Bitcoin Core Client Status
+비트코인 코어 클라이언트 상태에 대한 정보 얻기
 
-((("Bitcoin Core", "Bitcoin Core API", "status information")))Bitcoin Core provides status reports on diffent modules through the JSON-RPC interface. The most important commands include +getblockchaininfo+, +getmempoolinfo+, +getnetworkinfo+ and +getwalletinfo+.
+// ((("Bitcoin Core", "Bitcoin Core API", "status information")))Bitcoin Core provides status reports on diffent modules through the JSON-RPC interface. The most important commands include +getblockchaininfo+, +getmempoolinfo+, +getnetworkinfo+ and +getwalletinfo+.
+((("Bitcoin Core", "Bitcoin Core API", "status information")))비트코인 코어는 JSON-RPC interface를 통해 서로 다른 모듈에 대한 상태 리포트를 제공한다. 가장 중요한 명령에는 +getblockchaininfo+, +getmempoolinfo+, +getnetworkinfo+ 및 +getwalletinfo+ 등이 있다.
 
-Bitcoin's +getblockchaininfo+ RPC command was introduced earlier. The +getnetworkinfo+ command displays basic information about the status of the bitcoin network node. Use +bitcoin-cli+ to run it:
+// Bitcoin's +getblockchaininfo+ RPC command was introduced earlier. The +getnetworkinfo+ command displays basic information about the status of the bitcoin network node. Use +bitcoin-cli+ to run it:
+비트코인의 +getblockchaininfo+ RPC 명령어는 더 일찍 소개되었다. +getnetworkinfo+ 명령어는 비트코인 네트워크 노드 상태에 대한 기본적인 정보를 보여준다. +bitcoin-cli+ 를 이용하여 이 명령어를 실행해 보자.
 
 ----
 $ bitcoin-cli getnetworkinfo
@@ -549,21 +577,24 @@ $ bitcoin-cli getnetworkinfo
 
 ----
 
-The data is returned in JavaScript Object Notation (JSON), a format that can easily be "consumed" by all programming languages but is also quite human-readable. Among this data we see the version numbers for the bitcoin software client (150000) and bitcoin protocol (70015).  We see the current number of connections (8) and various information about the bitcoin network and the settings related to this client.
+// The data is returned in JavaScript Object Notation (JSON), a format that can easily be "consumed" by all programming languages but is also quite human-readable. Among this data we see the version numbers for the bitcoin software client (150000) and bitcoin protocol (70015).  We see the current number of connections (8) and various information about the bitcoin network and the settings related to this client.
+데이터는 자바스크립트 객체 표기법 (JavaScript Object Notation, JSON)으로 결과값을 보여준다. JSON은 모든 프로그래밍 언어로 쉽게 "사용 (consumed)" 가능하고 가독성이 좋다는 장점이 있다.
 
 [TIP]
 ====
-It will take some time, perhaps more than a day, for the +bitcoind+ client to "catch up" to the current blockchain height as it downloads blocks from other bitcoin clients. You can check its progress using +getblockchaininfo+ to see the number of known blocks.
+// It will take some time, perhaps more than a day, for the +bitcoind+ client to "catch up" to the current blockchain height as it downloads blocks from other bitcoin clients. You can check its progress using +getblockchaininfo+ to see the number of known blocks.
++bitcoind+ 클라이언트가 다른 비트코인 클라이언트로부터 블록을 다운로드 받으면서 현재의 블록체인 높이를 "따라잡는 (catch up)" 작업은 어느 정도의 시간이 소요되며 하루 이상이 걸릴 수도 있다. 현재까지 다운로드된 블록 수를 알아보려면 +getblockchaininfo+ 를 사용하여 현재 진행상황을 확인할 수 있다.
 ====
 
 [[exploring_and_decoding_transanctions]]
-==== Exploring and Decoding Transactions
+// ==== Exploring and Decoding Transactions
+==== 거래내역 살펴보기 및 디코딩하기
 
-((("Bitcoin Core", "Bitcoin Core API", "exploring and decoding transactions")))((("transactions", "exploring with Bitcoin Core API")))Commands: +getrawtransaction+, +decoderawtransaction+
+// ((("Bitcoin Core", "Bitcoin Core API", "exploring and decoding transactions")))((("transactions", "exploring with Bitcoin Core API")))Commands: +getrawtransaction+, +decoderawtransaction+
+((("Bitcoin Core", "Bitcoin Core API", "exploring and decoding transactions")))((("transactions", "exploring with Bitcoin Core API")))명령어: +getrawtransaction+, +decoderawtransaction+
 
-
-
-In <<cup_of_coffee>>, ((("use cases", "buying coffee", id="alicethree")))Alice bought a cup of coffee from Bob's Cafe. Her transaction was recorded on the blockchain with transaction ID (+txid+) +0627052b6f28912f2703066a912ea577f2ce4da4caa5a5fbd8a57286c345c2f2+. Let's use the API to retrieve and examine that transaction by passing the transaction ID as a parameter:
+// In <<cup_of_coffee>>, ((("use cases", "buying coffee", id="alicethree")))Alice bought a cup of coffee from Bob's Cafe. Her transaction was recorded on the blockchain with transaction ID (+txid+) +0627052b6f28912f2703066a912ea577f2ce4da4caa5a5fbd8a57286c345c2f2+. Let's use the API to retrieve and examine that transaction by passing the transaction ID as a parameter:
+<<cup_of_coffee>> 에서, ((("use cases", "buying coffee", id="alicethree")))앨리스는 밥의 까페에서 커피 한 잔을 구매했다. 앨리스의 거래 내역은 거래 ID (+txid+) +0627052b6f28912f2703066a912ea577f2ce4da4caa5a5fbd8a57286c345c2f2+ 로 블록체인에 기록되었다. API를 사용하여 거래 ID를 매개변수로 전달하여 해당 거래를 검색하고 살펴보자.
 
 ++++
 <pre data-type="programlisting">
@@ -583,10 +614,12 @@ ae24cb02204b9f039ff08df09cbe9f6addac960298cad530a863ea8f53982c09db8f6e3813014&#x
 
 [TIP]
 ====
-((("transaction IDs (txd)")))((("malleability")))A transaction ID is not authoritative until a transaction has been confirmed. Absence of a transaction hash in the blockchain does not mean the transaction was not processed. This is known as "transaction malleability," because transaction hashes can be modified prior to confirmation in a block. After confirmation, the +txid+ is immutable and authoritative.
+// ((("transaction IDs (txd)")))((("malleability")))A transaction ID is not authoritative until a transaction has been confirmed. Absence of a transaction hash in the blockchain does not mean the transaction was not processed. This is known as "transaction malleability," because transaction hashes can be modified prior to confirmation in a block. After confirmation, the +txid+ is immutable and authoritative.
+((("transaction IDs (txd)")))((("malleability")))거래가 승인되기 전까지 거래 ID는 효력을 발휘하지 못한다. 블록체인 내 거래 해시가 존재하지 않는다고 해서 거래가 진행되지 않았음을 의미하는 것은 아니다. 이를 "거래 가변성 (transaction malleability)" 이라고 하며, 이는 한 블록 내에서 승인 전 거래 해시가 변경될 수 있기 때문이다. 승인 후에는 +txid+ 는 변경될 수 없으며 신뢰할 수 있다.
 ====
 
-The command +getrawtransaction+ returns a serialized transaction in hexadecimal notation. To decode that, we use the +decoderawtransaction+ command, passing the hex data as a parameter. You can copy the hex returned by +getrawtransaction+ and paste it as a parameter to +decoderawtransaction+:
+// The command +getrawtransaction+ returns a serialized transaction in hexadecimal notation. To decode that, we use the +decoderawtransaction+ command, passing the hex data as a parameter. You can copy the hex returned by +getrawtransaction+ and paste it as a parameter to +decoderawtransaction+:
++getrawtransaction+ 명령어는 연속적인 거래를 16 진법 (hexadecimal notation)으로 반환한다. 이를 해독하려면 +decoderawtransaction+ 명령어를 사용하여 16 진수 데이터를 매개변수로 전달하면 된다. +getrawtransaction+ 명령어로 반환된 값을 복사하여 +decoderawtransaction+ 의 첫 번째 매개변수로 붙여 넣을 수 있다.
 
 ++++
 <pre data-type="programlisting">
@@ -653,19 +686,25 @@ d50f654e788acd0ef8000000000001976a9147f9b1a7fb68d60c536c2fd8aeaa53a8f3cc025a8&#x
 </pre>
 ++++
 
-The transaction decode shows all the components of this transaction, including the transaction inputs and outputs. In this case we see that the transaction that credited our new address with 15 millibits used one input and generated two outputs. The input to this transaction was the output from a previously confirmed transaction (shown as the vin +txid+ starting with +7957a35fe+). The two outputs correspond to the 15 millibit credit and an output with change back to the sender.
+// The transaction decode shows all the components of this transaction, including the transaction inputs and outputs. In this case we see that the transaction that credited our new address with 15 millibits used one input and generated two outputs. The input to this transaction was the output from a previously confirmed transaction (shown as the vin +txid+ starting with +7957a35fe+). The two outputs correspond to the 15 millibit credit and an output with change back to the sender.
+거래 디코드 (decode)는 거래의 입력값과 출력값을 포함하여 거래의 모든 구성 요소들을 보여준다. 이 경우에는 새로운 주소로 15 밀리비트를 입금하는 거래에서 하나의 입력값을 사용해서 두 개의 출력값이 생성된 것을 볼 수 있다. 이 거래의 입력값은 이전에 승인된 거래에서 나온 출력값이다 (+7957a35fe+ 로 시작하는 vin +txid+). 두 개의 출력값은 15 밀리비트 입금액과 송금인에게 되돌려 보낼 잔액에 해당한다.
 
-We can further explore the blockchain by examining the previous transaction referenced by its +txid+ in this transaction using the same commands (e.g., +getrawtransaction+). Jumping from transaction to transaction we can follow a chain of transactions back as the coins are transmitted from owner address to owner address.
+// We can further explore the blockchain by examining the previous transaction referenced by its +txid+ in this transaction using the same commands (e.g., +getrawtransaction+). Jumping from transaction to transaction we can follow a chain of transactions back as the coins are transmitted from owner address to owner address.
+동일한 명령어를 사용하여 (예: +getrawtransaction+) 이전 거래의 +txid+ 를 참조하여 해당 거래 정보를 블록체인에서 찾아 볼 수 있다. 비트코인이 새로운 소유주로 전송되면 각 거래를 넘나들면서 연결된 거래들을 추적할 수 있다.
 
 
 
-==== Exploring Blocks
+// ==== Exploring Blocks
+==== 블록 탐색하기
 
-((("Bitcoin Core", "Bitcoin Core API", "exploring blocks")))((("blocks", "exploring with Bitcoin Core API")))Commands: +getblock+, +getblockhash+
+// ((("Bitcoin Core", "Bitcoin Core API", "exploring blocks")))((("blocks", "exploring with Bitcoin Core API")))Commands: +getblock+, +getblockhash+
+((("Bitcoin Core", "Bitcoin Core API", "exploring blocks")))((("blocks", "exploring with Bitcoin Core API")))명령어: +getblock+, +getblockhash+
 
-((("blocks", "block height")))((("blocks", "block hash")))Exploring blocks is similar to exploring transactions. However, blocks can be referenced either by the block _height_ or by the block _hash_. First, let's find a block by its height. In <<cup_of_coffee>>, we saw that Alice's transaction was included in block 277316.
+// ((("blocks", "block height")))((("blocks", "block hash")))Exploring blocks is similar to exploring transactions. However, blocks can be referenced either by the block _height_ or by the block _hash_. First, let's find a block by its height. In <<cup_of_coffee>>, we saw that Alice's transaction was included in block 277316.
+((("blocks", "block height")))((("blocks", "block hash")))블록을 탐색하는 것은 거래를 탐색하는 것과 유사하다. 그러나 블록은 블록 _높이_ 나 블록 _해시_ 로 참조될 수 있다. 먼저 블록 높이로 블록을 찾아보자. <<cup_of_coffee>> 에서 앨리스의 거래가 블록 277316에 포함된 것을 확인하였다.
 
-We use the +getblockhash+ command, which takes the block height as the parameter and returns the block hash for that block:
+// We use the +getblockhash+ command, which takes the block height as the parameter and returns the block hash for that block:
++getblockhash+ 명령을 실행하면 블록 높이를 매개변수로 사용하고 그 블록에 대한 블록 해시를 반환한다.
 
 ++++
 <pre data-type="programlisting">
@@ -674,7 +713,8 @@ $ bitcoin-cli getblockhash 277316
 </pre>
 ++++
 
-Now that we know which block Alice's transaction was included in, we can query that block. We use the +getblock+ command with the block hash as the parameter:
+// Now that we know which block Alice's transaction was included in, we can query that block. We use the +getblock+ command with the block hash as the parameter:
+이제 앨리스의 거래가 어느 블록에 포함되었는지 알 수 있기 때문에 해당 블록을 쿼리(query) 할 수 있다. 매개변수로 블록 해시를 사용하여 +getblock+ 명령어를 사용해 보자.
 
 ++++
 <pre data-type="programlisting">
@@ -721,32 +761,43 @@ $ bitcoin-cli getblock 0000000000000001b6b9a13b095e96db41c4a928b97ef2d944a9b3&#x
 </pre>
 ++++
 
-The block contains 419 transactions and the 64th transaction listed (+0627052b...+) is Alice's coffee payment. The +height+ entry tells us this is the 277316th block in the blockchain.
+// The block contains 419 transactions and the 64th transaction listed (+0627052b...+) is Alice's coffee payment. The +height+ entry tells us this is the 277316th block in the blockchain.
+블록은 419 개의 거래로 구성되며 64 번째 거래 (+0627052b...+) 가 앨리스의 커피 지불값이다. +height+ 는 해당 블록이 블록체인에서 277316 번째 거래라는 것을 나타낸다.
 
-==== Using Bitcoin Core's Programmatic Interface
+// ==== Using Bitcoin Core's Programmatic Interface
+==== 비트코인 코어의 프로그래밍 인터페이스 사용
 
-((("Bitcoin Core", "Bitcoin Core API", "using programmatic interface")))((("programmatic interface", id="progint03")))The +bitcoin-cli+ helper is very useful for exploring the Bitcoin Core API and testing functions. But the whole point of an application programming interface is to access functions programmatically. In this section we will demonstrate accessing Bitcoin Core from another program.
+// ((("Bitcoin Core", "Bitcoin Core API", "using programmatic interface")))((("programmatic interface", id="progint03")))The +bitcoin-cli+ helper is very useful for exploring the Bitcoin Core API and testing functions. But the whole point of an application programming interface is to access functions programmatically. In this section we will demonstrate accessing Bitcoin Core from another program.
+((("Bitcoin Core", "Bitcoin Core API", "using programmatic interface")))((("programmatic interface", id="progint03")))+bitcoin-cli+ 헬퍼는 비트코인 코어 API를 탐색하고 함수를 테스트할 때 매우 유용하다. 그러나 어플리케이션 프로그래밍 인터페이스의 포인트는 프로그래밍 방식으로 함수에 접근한다는 것이다. 이번 섹션에서는 다른 프로그램으로부터 비트코인 코어에 접속하는 방법을 소개할 것이다.
 
-Bitcoin Core's API is a JSON-RPC interface. JSON stands for JavaScript Object Notation and it is a very convenient way to present data that both humans and programs can easily read. RPC stands for Remote Procedure Call, which means that we are calling procedures (functions) that are remote (on the Bitcoin Core node) via a network protocol. In this case, the network protocol is HTTP, or HTTPS (for encrypted connections).
+// Bitcoin Core's API is a JSON-RPC interface. JSON stands for JavaScript Object Notation and it is a very convenient way to present data that both humans and programs can easily read. RPC stands for Remote Procedure Call, which means that we are calling procedures (functions) that are remote (on the Bitcoin Core node) via a network protocol. In this case, the network protocol is HTTP, or HTTPS (for encrypted connections).
+비트코인 코어 API는 JSON-RPC 인터페이스이다. JSON은 자바스크립트 객체 표기법을 의미하며 사람이나 프로그램이 쉽게 읽을 수 있는 데이터를 제시하는 매우 편리한 방법이다. RPC는 원격 프로시저 호출 (Remote Procedure Call을 나타내며 이는 네트워크 프로토콜을 통해 원격 (비트코인 코어 노드에 있는) 프로시저 (함수)를 호출함을 의미한다. 이 경우에 네트워크 프로토콜은 HTTP 또는 HTTPS (암호화된 연결의 경우)이다.
 
-When we used the +bitcoin-cli+ command to get help on a command, it showed us an example of using +curl+, the versatile command-line HTTP client to construct one of these JSON-RPC calls:
+// When we used the +bitcoin-cli+ command to get help on a command, it showed us an example of using +curl+, the versatile command-line HTTP client to construct one of these JSON-RPC calls:
+명령어에 대한 도움을 얻기 위해 +bitcoin-cli+ 명령을 사용하면, 이러한 JSON-RPC 호출 중 하나를 구성하기 위해 다목적 명령행 HTTP 클라이언트인 +curl+ 을 사용한 예시를 보여준다.
 
 ----
 $ curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockchaininfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ----
 
-This command shows that +curl+ submits an HTTP request to the local host (127.0.0.1), connecting to the default bitcoin port (8332), and submitting a  +jsonrpc+ request for the +getblockchaininfo+ method using +text/plain+ encoding.
+// This command shows that +curl+ submits an HTTP request to the local host (127.0.0.1), connecting to the default bitcoin port (8332), and submitting a  +jsonrpc+ request for the +getblockchaininfo+ method using +text/plain+ encoding.
+이 명령은 +curl+ 이 HTTP 요청을 로컬 호스트 (127.0.0.1)에 제출하고 기본 비트코인 포트 (8332)에 연결하며 +text/plain+ 인코딩을 사용하여 +getblockchaininfo+ 방법에 대한 +jsonrpc+ 요청을 제출함을 보여준다.
 
-You might notice that curl will ask for credentials to be sent along with the request. Bitcoin Core will create a random password on each start and place it in the data directory under the name +.cookie+. The +bitcoin-cli+ helper can read this password file given the data directory. Similarly, you can copy the password and pass it to curl (or any higher level Bitcoin Core RPC wrappers). Alternatively, you can create a static password with the helper script provided in _./share/rpcuser/rpcuser.py_ in Bitcoin Core's source directory.
+// You might notice that curl will ask for credentials to be sent along with the request. Bitcoin Core will create a random password on each start and place it in the data directory under the name +.cookie+. The +bitcoin-cli+ helper can read this password file given the data directory. Similarly, you can copy the password and pass it to curl (or any higher level Bitcoin Core RPC wrappers). Alternatively, you can create a static password with the helper script provided in _./share/rpcuser/rpcuser.py_ in Bitcoin Core's source directory.
+명령어 curl이 요청과 함께 전송될 자격 증명을 요청할 수도 있다. 비트코인 코어는 시작할 때마다 무작위 비밀번호를 생성하고 +.cookie+ 의 이름으로 데이터 디렉토리에 저장한다. +bitcoin-cli+ 헬퍼는 주어진 데이터 디렉토리에서 이 비밀번호 파일을 읽을 수 있다. 마찬가지로 암호를 복사하여 curl (또는 상위 비트코인 코어 RPC 래퍼)에 전달할 수 있다. 또는 비트코인 코어 소스 디렉토리 내 _./share/rpcuser/rpcuser.py_ 에서 제공하는 헬퍼 스크립트를 사용하여 고정된 비밀번호를 생성할 수도 있다.
 
-If you're implementing a JSON-RPC call in your own program, you can use a generic HTTP library to construct the call, similar to what is shown in the preceding +curl+ example.
+// If you're implementing a JSON-RPC call in your own program, you can use a generic HTTP library to construct the call, similar to what is shown in the preceding +curl+ example.
+자체 프로그램에서 JSON-RPC 호출을 구현하는 경우, 호출을 구성하기 위해 앞의 +curl+ 예제와 유사하게 일반 HTTP 라이브러리를 사용할 수 있다.
 
-However, there are libraries in most every programming language that "wrap" the Bitcoin Core API in a way that makes this a lot simpler. We will use the +python-bitcoinlib+ library to simplify API access. Remember, this requires you to have a running Bitcoin Core instance, which will be used to make JSON-RPC calls.
+// However, there are libraries in most every programming language that "wrap" the Bitcoin Core API in a way that makes this a lot simpler. We will use the +python-bitcoinlib+ library to simplify API access. Remember, this requires you to have a running Bitcoin Core instance, which will be used to make JSON-RPC calls.
+그러나 비트코인 코어 API를 더 단순하게 "랩핑 (wrap)" 하는 대부분의 프로그래밍 언어들에는 라이브러리가 존재한다. 우리는 API 접근을 단순화하기 위해 +python-bitcoinlib+ 라이브러리를 사용할 것이다. 이것은 JSON-RPC 호출을 실행하기 위해 사용될 비트코인 코어 인스턴스 (instance) 실행을 요구한다는 것을 기억하라.
 
-The Python script in <<rpc_example>> makes a simple +getblockchaininfo+ call and prints the +block+ parameter from the data returned by Bitcoin Core.
+// The Python script in <<rpc_example>> makes a simple +getblockchaininfo+ call and prints the +block+ parameter from the data returned by Bitcoin Core.
+<<rpc_example>> 의 파이썬 스크립트는 단순한 +getblockchaininfo+ 호출을 만들고 비트코인 코어에서 반환된 데이터로부터 +block+ 파라미터를 출력한다.
 
 [[rpc_example]]
-.Running getblockchaininfo via Bitcoin Core's JSON-RPC API
+// .Running getblockchaininfo via Bitcoin Core's JSON-RPC API
+.비트코인 코어의 JSON-RPC API를 통해 getblockchaininfo 실행하기
 ====
 [source,python]
 ----
@@ -754,19 +805,23 @@ include::code/rpc_example.py[]
 ----
 ====
 
-Running it gives us the following result:
+// Running it gives us the following result:
+이를 실행하면 다음과 같은 결과가 나타난다:
 
 ----
 $ python rpc_example.py
 394075
 ----
 
-It tells us that our local Bitcoin Core node has 394075 blocks in its blockchain. Not a spectacular result, but it demonstrates the basic use of the library as a simplified interface to Bitcoin Core's JSON-RPC API.
+// It tells us that our local Bitcoin Core node has 394075 blocks in its blockchain. Not a spectacular result, but it demonstrates the basic use of the library as a simplified interface to Bitcoin Core's JSON-RPC API.
+로컬 비트코인 코어 노드는 블록체인에 394075 블록이 있다는 것을 나타낸다. 탁월한 결과는 아니지만 비트코인 코어의 JSON-RPC API에 대한 단순화된 인터페이스로서의 라이브러리 기본 사용을 보여준다.
 
-Next, let's use the +getrawtransaction+ and +decodetransaction+ calls to retrieve the details of Alice's coffee payment. In <<rpc_transaction>>, we retrieve Alice's transaction and list the transaction's outputs. For each output, we show the recipient address and value. As a reminder, Alice's transaction had one output paying Bob's Cafe and one output for change back to Alice.
+// Next, let's use the +getrawtransaction+ and +decodetransaction+ calls to retrieve the details of Alice's coffee payment. In <<rpc_transaction>>, we retrieve Alice's transaction and list the transaction's outputs. For each output, we show the recipient address and value. As a reminder, Alice's transaction had one output paying Bob's Cafe and one output for change back to Alice.
+다음으로 앨리스 커피 결제의 세부 정보를 검색하기 위해 +getrawtransaction+ 및 +decodetransaction+ 호출을 사용해 보자. <<rpc_transaction>> 에서 앨리스의 거래를 검색하고 거래의 출력값을 나열했다. 각 출력값에 대해서 수신자 주소와 값을 표시했다. 다시 말하자면, 앨리스의 거래는 밥의 까페에 지불하는 출력값 하나와 앨리스에게 되돌아가는 잔액에 대한 출력값 하나를 가진다.
 
 [[rpc_transaction]]
-.Retrieving a transaction and iterating its outputs
+// .Retrieving a transaction and iterating its outputs
+.거래 검색 및 이에 대한 출력값 반복하기
 ====
 [source,python]
 ----
@@ -774,7 +829,8 @@ include::code/rpc_transaction.py[]
 ----
 ====
 
-Running this code, we get:
+// Running this code, we get:
+이 코드를 실행하면 다음과 같이 나타난다:
 
 ----
 $ python rpc_transaction.py
@@ -782,12 +838,15 @@ $ python rpc_transaction.py
 ([u'1Cdid9KFAaatwczBwBttQcwXYCpvK8h7FK'], Decimal('0.08450000'))
 ----
 
-Both of the preceding examples are rather simple. You don't really need a program to run them; you could just as easily use the +bitcoin-cli+ helper. The next example, however, requires several hundred RPC calls and more clearly demonstrates the use of a programmatic interface.
+// Both of the preceding examples are rather simple. You don't really need a program to run them; you could just as easily use the +bitcoin-cli+ helper. The next example, however, requires several hundred RPC calls and more clearly demonstrates the use of a programmatic interface.
+앞에 소개한 예시들은 모두 다소 단순하다. 이것들을 실행하기 위해 프로그램이 필요하지 않을 수도 있다; +bitcoin-cli+ 헬퍼를 사용하면 된다. 그러나 다음 예에서는 수 백가지의 RPC 호출을 요구하고 프로그래밍 인터페이스의 사용을 보다 명확하게 보여준다.
 
-In <<rpc_block>>, we first retrieve block 277316, then retrieve each of the 419 transactions within by reference to each transaction ID. Next, we iterate through each of the transaction's outputs and add up the value.((("", startref="alicethree")))
+// In <<rpc_block>>, we first retrieve block 277316, then retrieve each of the 419 transactions within by reference to each transaction ID. Next, we iterate through each of the transaction's outputs and add up the value.((("", startref="alicethree")))
+<<rpc_block>> 에서 처음에는 277316 블록을 검색하고 그 후 각 거래 ID에 대한 참조를 통해 419 개의 거래를 각각 검색했다. 다음으로 각 거래의 출력을 반복하고 값을 합산했다.((("", startref="alicethree")))
 
 [[rpc_block]]
-.Retrieving a block and adding all the transaction outputs
+// .Retrieving a block and adding all the transaction outputs
+.블록 검색 및 모든 출력값 합산하기
 ====
 [source,python]
 ----
@@ -795,7 +854,8 @@ include::code/rpc_block.py[]
 ----
 ====
 
-Running this code, we get:
+// Running this code, we get:
+이 코드를 실행하면 다음과 같은 결과가 나타난다:
 
 ----
 $ python rpc_block.py
@@ -803,51 +863,74 @@ $ python rpc_block.py
 ('Total value in block: ', Decimal('10322.07722534'))
 ----
 
-Our example code calculates that the total value transacted in this block is 10,322.07722534 BTC (including 25 BTC reward and 0.0909 BTC in fees). Compare that to the amount reported by a block explorer site by searching for the block hash or height. Some block explorers report the total value excluding the reward and excluding the fees. See if you can spot the difference.((("", startref="BCapi03")))((("", startref="progint03")))
+// Our example code calculates that the total value transacted in this block is 10,322.07722534 BTC (including 25 BTC reward and 0.0909 BTC in fees). Compare that to the amount reported by a block explorer site by searching for the block hash or height. Some block explorers report the total value excluding the reward and excluding the fees. See if you can spot the difference.((("", startref="BCapi03")))((("", startref="progint03")))
+이 예시에서는 이 블록에서 거래된 총 금액이 10,322.07722534 BTC (25 BTC 보상 및 0.0909 BTC 수수료 포함)라는 것을 계산한다. 블록 해시나 높이를 검색하여 블록 익스플로러 사이트에서 제공되는 금액과 비교해 보라. 일부 블록 익스플로러에서는 보상 및 수수료를 제외한 총 금액을 제공한다. 차이점을 발견할 수 있는지 확인하라.((("", startref="BCapi03")))((("", startref="progint03")))
 
 [[alt_libraries]]
-=== Alternative Clients, Libraries, and Toolkits
+// === Alternative Clients, Libraries, and Toolkits
+=== 그 외 사용 가능한 클라이언트, 라이브러리 및 툴키트
 
-((("Bitcoin Core", "alternatives to", id="BCalt03")))((("clients, libraries, and toolkits", id="clients03")))((("libraries, clients, and toolkits", id="librar03")))((("toolkits, libraries, and clients", id="toolkit03")))((("third-party API clients", id="thirdpart03")))There are many alternative clients, libraries, toolkits, and even full-node implementations in the bitcoin ecosystem. These are implemented in a variety of programming languages, offering programmers native interfaces in their preferred language.
+// ((("Bitcoin Core", "alternatives to", id="BCalt03")))((("clients, libraries, and toolkits", id="clients03")))((("libraries, clients, and toolkits", id="librar03")))((("toolkits, libraries, and clients", id="toolkit03")))((("third-party API clients", id="thirdpart03")))There are many alternative clients, libraries, toolkits, and even full-node implementations in the bitcoin ecosystem. These are implemented in a variety of programming languages, offering programmers native interfaces in their preferred language.
+((("Bitcoin Core", "alternatives to", id="BCalt03")))((("clients, libraries, and toolkits", id="clients03")))((("libraries, clients, and toolkits", id="librar03")))((("toolkits, libraries, and clients", id="toolkit03")))((("third-party API clients", id="thirdpart03")))비트코인 생태계에는 다양한 클라이언트, 라이브러리, 툴키트 및 심지어 풀 노드 구현들이 존재한다. 다양한 프로그래밍 언어로 구현되므로 프로그래머들이 선호하는 언어로 네이티브 인터페이스 (native interface)를 제공한다.
 
-The following sections list some of the best libraries, clients, and toolkits, organized by programming languages.
+// The following sections list some of the best libraries, clients, and toolkits, organized by programming languages.
+다음 섹션에서는 프로그래밍 언어별로 정리된 가장 많이 사용되는 라이브러리, 클라이언트 및 툴키트 중 일부를 소개한다.
 
 ==== C/C++
-https://github.com/bitcoin/bitcoin[Bitcoin Core] :: The reference implementation of bitcoin
-https://github.com/libbitcoin/libbitcoin[libbitcoin]:: Cross-platform C++ development toolkit, node, and consensus library
-https://github.com/libbitcoin/libbitcoin-explorer[bitcoin explorer]:: Libbitcoin's command-line tool
-https://github.com/jgarzik/picocoin[picocoin]:: A C language lightweight client library for bitcoin by Jeff Garzik
+// https://github.com/bitcoin/bitcoin[Bitcoin Core] :: The reference implementation of bitcoin
+https://github.com/bitcoin/bitcoin[Bitcoin Core] :: 비트코인의 참조구현
+// https://github.com/libbitcoin/libbitcoin[libbitcoin]:: Cross-platform C++ development toolkit, node, and consensus library
+https://github.com/libbitcoin/libbitcoin[libbitcoin]:: C++ 개발 툴키트, 노드 및 합의 라이브러리 크로스 플랫폼
+// https://github.com/libbitcoin/libbitcoin-explorer[bitcoin explorer]:: Libbitcoin's command-line tool
+https://github.com/libbitcoin/libbitcoin-explorer[bitcoin explorer]:: Libbitcoin의 명령행 도구
+// https://github.com/jgarzik/picocoin[picocoin]:: A C language lightweight client library for bitcoin by Jeff Garzik
+https://github.com/jgarzik/picocoin[picocoin]:: Jeff Garzik가 개발한 비트코인용 라이트웨이트 클라이언트 라이브러리 C 구현
 
 ==== JavaScript
-http://bcoin.io/[bcoin]:: A modular and scalable full-node implementation with API
-https://bitcore.io/[Bitcore] :: Full node, API, and library by Bitpay
-https://github.com/bitcoinjs/bitcoinjs-lib[BitcoinJS] :: A pure JavaScript Bitcoin library for node.js and browsers
+// http://bcoin.io/[bcoin]:: A modular and scalable full-node implementation with API
+http://bcoin.io/[bcoin]:: API를 사용한 모듈화되고 확장 가능한 풀 노드 구현
+// https://bitcore.io/[Bitcore] :: Full node, API, and library by Bitpay
+https://bitcore.io/[Bitcore] :: Bitpay의 풀 노드, API 및 라이브러리
+// https://github.com/bitcoinjs/bitcoinjs-lib[BitcoinJS] :: A pure JavaScript Bitcoin library for node.js and browsers
+https://github.com/bitcoinjs/bitcoinjs-lib[BitcoinJS] :: node.js 및 브라우저를 위한 자바스크립트 비트코인 라이브러리
 
 ==== Java
-https://bitcoinj.github.io[bitcoinj]:: A Java full-node client library
-https://bitsofproof.com[Bits of Proof (BOP)]:: A Java enterprise-class implementation of bitcoin
+// https://bitcoinj.github.io[bitcoinj]:: A Java full-node client library
+https://bitcoinj.github.io[bitcoinj]:: 자바 풀 노드 클라이언트 라이브러리
+// https://bitsofproof.com[Bits of Proof (BOP)]:: A Java enterprise-class implementation of bitcoin
+https://bitsofproof.com[Bits of Proof (BOP)]:: 비트코인의 자바 엔터프라이즈 클래스 구현
 
 ==== PHP
-https://github.com/bit-wasp/bitcoin-php[bitwasp/bitcoin]:: A PHP bitcoin library, and related projects
+// https://github.com/bit-wasp/bitcoin-php[bitwasp/bitcoin]:: A PHP bitcoin library, and related projects
+https://github.com/bit-wasp/bitcoin-php[bitwasp/bitcoin]:: PHP 비트코인 라이브러리 및 연관 프로젝트
 
 ==== Python
-https://github.com/petertodd/python-bitcoinlib[python-bitcoinlib]::  A Python bitcoin library, consensus library, and node by Peter Todd
-https://github.com/richardkiss/pycoin[pycoin]:: A Python bitcoin library by Richard Kiss
-https://github.com/vbuterin/pybitcointools[pybitcointools]:: A Python bitcoin library by Vitalik Buterin
+// https://github.com/petertodd/python-bitcoinlib[python-bitcoinlib]::  A Python bitcoin library, consensus library, and node by Peter Todd
+https://github.com/petertodd/python-bitcoinlib[python-bitcoinlib]:: Peter Todd가 개발한 파이썬 비트코인 라이브러리, 합의 라이브러리 및 노드
+// https://github.com/richardkiss/pycoin[pycoin]:: A Python bitcoin library by Richard Kiss
+https://github.com/richardkiss/pycoin[pycoin]:: Richard Kiss가 개발한 파이썬 비트코인 라이브러리
+// https://github.com/vbuterin/pybitcointools[pybitcointools]:: A Python bitcoin library by Vitalik Buterin
+https://github.com/vbuterin/pybitcointools[pybitcointools]:: Vitalik Buterin이 개발한 파이썬 비트코인 라이브러리
 
 ==== Ruby
-https://github.com/sinisterchipmunk/bitcoin-client[bitcoin-client]:: A Ruby library wrapper for the JSON-RPC API
+// https://github.com/sinisterchipmunk/bitcoin-client[bitcoin-client]:: A Ruby library wrapper for the JSON-RPC API
+https://github.com/sinisterchipmunk/bitcoin-client[bitcoin-client]:: JSON-RPC API에 대한 Ruby 라이브러리 래퍼
 
 ==== Go
-https://github.com/btcsuite/btcd[btcd]:: A Go language full-node bitcoin client
+// https://github.com/btcsuite/btcd[btcd]:: A Go language full-node bitcoin client
+https://github.com/btcsuite/btcd[btcd]:: Go 언어 풀 노드 비트코인 클라이언트
 
 ==== Rust
-https://github.com/apoelstra/rust-bitcoin[rust-bitcoin]:: Rust bitcoin library for serialization, parsing, and API calls
+// https://github.com/apoelstra/rust-bitcoin[rust-bitcoin]:: Rust bitcoin library for serialization, parsing, and API calls
+https://github.com/apoelstra/rust-bitcoin[rust-bitcoin]:: 직렬화 (serialization), 파싱 (parsing), API 호출을 위한 Rust 비트코인 라이브러리
 
 ==== C#
-https://github.com/MetacoSA/NBitcoin[NBitcoin]:: Comprehensive bitcoin library for the .NET framework
+// https://github.com/MetacoSA/NBitcoin[NBitcoin]:: Comprehensive bitcoin library for the .NET framework
+https://github.com/MetacoSA/NBitcoin[NBitcoin]:: .NET framework에 대한 포괄적인 비트코인 라이브러리
 
 ==== Objective-C
-https://github.com/oleganza/CoreBitcoin[CoreBitcoin]:: Bitcoin toolkit for ObjC and Swift
+// https://github.com/oleganza/CoreBitcoin[CoreBitcoin]:: Bitcoin toolkit for ObjC and Swift
+https://github.com/oleganza/CoreBitcoin[CoreBitcoin]:: ObjC 및 Swift에 대한 비트코인 툴키트
 
-Many more libraries exist in a variety of other programming languages and more are created all the time.((("", startref="BCalt03")))((("", startref="clients03")))((("", startref="thirdpart03")))((("", startref="toolkit03")))((("", startref="librar03")))
+// Many more libraries exist in a variety of other programming languages and more are created all the time.((("", startref="BCalt03")))((("", startref="clients03")))((("", startref="thirdpart03")))((("", startref="toolkit03")))((("", startref="librar03")))
+더 많은 라이브러리가 다양한 프로그래밍 언어로 존재하며, 그 외의 라이브러리들도 계속해서 생성되고 있다.((("", startref="BCalt03")))((("", startref="clients03")))((("", startref="thirdpart03")))((("", startref="toolkit03")))((("", startref="librar03")))
