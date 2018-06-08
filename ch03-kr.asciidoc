@@ -283,7 +283,7 @@ $ which bitcoin-cli
 * 비트코인을 지원하고 싶은 경우. 노드를 운영하는 것은 네트워크를 더 강력하게 만들고 더 많은 지갑, 더 많은 사용자 및 더 많은 거래를 처리할 수 있도록 한다.
 
 // * If you do not want to rely on any third party to process or validate your transactions.
-거래를 처리하거나 검증할 때 제 3자에 의존하는 것을 원하지 않는 경우.
+* 거래를 처리하거나 검증할 때 제 3자에 의존하는 것을 원하지 않는 경우.
 
 // If you're reading this book and interested in developing bitcoin software, you should be running your own node.
 이 책을 읽고 비트코인 소프트웨어 개발에 관심이 있다면, 반드시 스스로 노드를 실행해봐야 한다.
