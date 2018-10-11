@@ -19,10 +19,13 @@
 키는 개인 (비밀)키와 공개키 한 쌍으로 구성된다. 공개키는 은행 계좌번호와 유사하고 비밀키는 계좌를 관리할 수 있는 비밀 PIN 또는 수표의 서명과 유사하다고 생각하면 된다. 비트코인의 사용자들은 이러한 비밀키를 거의 볼 수 없다. 대부분의 경우 비밀키는 지갑 파일 내에 저장되고 비트코인 지갑 소프트웨어에 의해 관리된다.
 
 // In the payment portion of a bitcoin transaction, the recipient's public key is represented by its digital fingerprint, called a _bitcoin address_, which is used in the same way as the beneficiary name on a check (i.e., "Pay to the order of"). In most cases, a bitcoin address is generated from and corresponds to a public key. However, not all bitcoin addresses represent public keys; they can also represent other beneficiaries such as scripts, as we will see later in this chapter. This way, bitcoin addresses abstract the recipient of funds, making transaction destinations flexible, similar to paper checks: a single payment instrument that can be used to pay into people's accounts, pay into company accounts, pay for bills, or pay to cash. The bitcoin address is the only representation of the keys that users will routinely see, because this is the part they need to share with the world.
+비트코인 거래에 있어서 수취인의 공개키는 _비트코인 주소_ 라고 하는 디지털 지문으로 표현되며, 이는 수표에 수취인의 이름을 기입하는 것 (즉, "~에게 지불")과 동일한 방식이다. 대부분의 경우 비트코인 주소는 공개키로부터 생성되며 공개키에 대응한다. 하지만 모든 비트코인 주소가 공개키를 나타내는 것은 아니다; 이후에 살펴보겠지만 스크립트 등이 공개키 역할을 하기도 한다. 이러한 방식으로 비트코인 주소는 수표처럼 수취를 요약해서 보여줌으로써 거래 송금처를 유연하게 지정할 수 있다. 즉, 단 하나의 지급수단으로도 개인 계좌나 기업 계좌, 청구서에 대한 지불 또는 현금 거래 모두 가능하다. 비트코인 주소는 사용자가 일상적으로 보게 될 키를 대신하는 유일한 수단이며, 이것은 다른 사람들과 공유해야할 부분이기 때문이다.
 
-First, we will introduce cryptography and explain the mathematics used in bitcoin. Next, we will look at how keys are generated, stored, and managed.  We will review the various encoding formats used to represent private and public keys, addresses, and script addresses. Finally, we will look at advanced use of keys and addresses: vanity, multisignature, and script addresses and paper wallets.
+//First, we will introduce cryptography and explain the mathematics used in bitcoin. Next, we will look at how keys are generated, stored, and managed.  We will review the various encoding formats used to represent private and public keys, addresses, and script addresses. Finally, we will look at advanced use of keys and addresses: vanity, multisignature, and script addresses and paper wallets.
+먼저 암호학에 대해 소개하고 비트코인에 사용되는 수학을 설명할 것이다. 다음 키가 어떻게 생성 및 저장, 관리되는지에 대해 알아볼 것이다. 그리고 개인키, 공개키, 주소, 스크립트 주소 등을 대신하기 위해 사용되는 다양한 인코딩 형식에 대해 살펴볼 것이다. 마지막으로 vanity 주소, 다중서명 (multisignature) 및 스크립트 주소와 종이 지갑 (paper wallet) 등 키와 주소의 특별한 사용에 대해 다룰 것이다.
 
-==== Public Key Cryptography and Cryptocurrency
+//==== Public Key Cryptography and Cryptocurrency
+==== 공개키의 암호학 및 암호화폐
 
 ((("keys and addresses", "overview of", "public key cryptography")))((("digital currencies", "cryptocurrency")))Public key cryptography was invented in the 1970s and is a mathematical foundation for computer and information security.
 
