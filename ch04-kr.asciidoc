@@ -27,19 +27,25 @@
 //==== Public Key Cryptography and Cryptocurrency
 ==== 공개키의 암호학 및 암호화폐
 
-((("keys and addresses", "overview of", "public key cryptography")))((("digital currencies", "cryptocurrency")))Public key cryptography was invented in the 1970s and is a mathematical foundation for computer and information security.
+//((("keys and addresses", "overview of", "public key cryptography")))((("digital currencies", "cryptocurrency")))Public key cryptography was invented in the 1970s and is a mathematical foundation for computer and information security.
+((("keys and addresses", "overview of", "public key cryptography")))((("digital currencies", "cryptocurrency")))공개키 암호법은 1970년대에 발명되었으며 컴퓨터 및 정보보안의 수학적 기초이다.
 
-Since the invention of public key cryptography, several suitable mathematical functions, such as prime number exponentiation and elliptic curve multiplication, have been discovered. These mathematical functions are practically irreversible, meaning that they are easy to calculate in one direction and infeasible to calculate in the opposite direction. Based on these mathematical functions, cryptography enables the creation of digital secrets and unforgeable digital signatures. Bitcoin uses elliptic curve multiplication as the basis for its cryptography.
+//Since the invention of public key cryptography, several suitable mathematical functions, such as prime number exponentiation and elliptic curve multiplication, have been discovered. These mathematical functions are practically irreversible, meaning that they are easy to calculate in one direction and infeasible to calculate in the opposite direction. Based on these mathematical functions, cryptography enables the creation of digital secrets and unforgeable digital signatures. Bitcoin uses elliptic curve multiplication as the basis for its cryptography.
+공개키 암호법이 발명된 이후 소수 지수함수 및 타원곡선 곱셈함수 (elliptic curve multiplication) 등 몇 가지 적합한 수학 함수가 발견되었다. 이러한 수학 함수들은 실제로는 비가역적이며, 이는 한 방향으로 계산하는 것은 쉽지만 반대 방향으로 계산하는 것은 불가능하다는 것을 의미한다. 이러한 수학 함수에 기반한 암호법은 디지털 비밀번호 및 위조가 불가능한 디지털 서명의 생성을 가능하게 한다. 비트모인은 공개키 암호법으로 타원곡선 곱셈함수를 기본으로 사용한다.
 
-In bitcoin, we use public key cryptography to create a key pair that controls access to bitcoin. The key pair consists of a private key and--derived from it--a unique public key. The public key is used to receive funds, and the private key is used to sign transactions to spend the funds.
+//In bitcoin, we use public key cryptography to create a key pair that controls access to bitcoin. The key pair consists of a private key and--derived from it--a unique public key. The public key is used to receive funds, and the private key is used to sign transactions to spend the funds.
+비트코인에서는 비트코인에 접근하는 권한을 주는 한 쌍의 키를 생성하기 위해 공개키 암호법을 사용한다. 한 쌍의 키는 개인키와--개인키에서 파생된--고유의 공개키로 구성된다. 공개키는 비트코인을 전송받을 때 사용되고 개인키는 비트코인을 소비하는 거래에 서명할 때 사용된다.
 
-There is a mathematical relationship between the public and the private key that allows the private key to be used to generate signatures on messages. This signature can be validated against the public key without revealing the private key.
+//There is a mathematical relationship between the public and the private key that allows the private key to be used to generate signatures on messages. This signature can be validated against the public key without revealing the private key.
+공개키와 개인키 사이에는 수학적 관계가 성립하며, 이 때문에 메시지에 대한 서명을 할때 개인키를 사용할 수 있다. 이 서명은 개인키를 노출하지 않고 공개키만으로 유효성 확인이 가능하다.
 
-When spending bitcoin, the current bitcoin owner presents her public key and a signature (different each time, but created from the same private key) in a transaction to spend those bitcoin. Through the presentation of the public key and signature, everyone in the bitcoin network can verify and accept the transaction as valid, confirming that the person transferring the bitcoin owned them at the time of the transfer.
+//When spending bitcoin, the current bitcoin owner presents her public key and a signature (different each time, but created from the same private key) in a transaction to spend those bitcoin. Through the presentation of the public key and signature, everyone in the bitcoin network can verify and accept the transaction as valid, confirming that the person transferring the bitcoin owned them at the time of the transfer.
+비트코인을 소비하는 경우, 현재 비트코인 소유주가 이 비트코인을 소비하기 위해서 거래 내에 공개키 및 서명 (매번 다르지만 동일한 개인키로부터 생성됨)을 공개한다. 공개키 및 서명을 공개함으로써 비트코인 네트워크 상 모든 사람들이 그 거래를 검증하고 유효한 거래로 받아들일 수 있게 된다. 동시에 비트코인을 전송하려고 하는 사람이 전송 당시에 비트코인을 소유하고 있었는지도 확인 할 수 있다.
 
 [TIP]
 ====
-((("keys and addresses", "overview of", "key pairs")))In most wallet implementations, the private and public keys are stored together as a _key pair_ for convenience. However, the public key can be calculated from the private key, so storing only the private key is also possible.
+//((("keys and addresses", "overview of", "key pairs")))In most wallet implementations, the private and public keys are stored together as a _key pair_ for convenience. However, the public key can be calculated from the private key, so storing only the private key is also possible.
+((("keys and addresses", "overview of", "key pairs")))대부분의 지갑 구현에서 개인키 및 공개키는 편의를 위해 _한 쌍_ 의 형태로 저장된다. 그러나 공개키는 개인키로부터 계산할 수 있기 때문에 개인키만 저장하는 것 역시 가능하다.
 ====
 
 [[private_public_keys]]
